@@ -1,0 +1,361 @@
+{% extends "../base.html" %}
+{% block header %}
+    {% include '../home/inside_header.html' %}
+{% end %}
+{% block body %}
+<div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
+<h1><span class="title-view">Revista ME </span></h1>
+<!-- <h4><span class="keywords-view">Accede a todos nuestros números pasdos</span></h4> -->
+</div>
+    <div class="container-fluid container-fluid-art cart-list productlist revistame">
+
+        <div class="row pages-caption" style="">
+            <div class="container-fluid-art">
+            <p>{% if is_admin %}
+                <span class="editabletext" text-id="{{ 'me_revistame' }}" >{{ read_text('me_revistame') }}</span>
+                {% else %}
+                {{ read_text('me_revistame') }}
+                {% end %}</p>
+            </div>
+        </div>
+
+        <div style="height: 352px;">
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/me_alta_51" target="_blank">
+                    <img class="img-responsive tam" class="https://7static.loadingplay.com/static/images/b01fab72e5c7034d0ce528d4bc8a6695_Portada.png" src="https://7static.loadingplay.com/static/images/b01fab72e5c7034d0ce528d4bc8a6695_Portada.png" width="94" height="119">
+                </a> 
+                <p>Nro 51</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/revista_me" target="_blank">
+                    <img class="img-responsive tam" class="https://84static.loadingplay.com/static/images/f5597ace6645cb41a5d81922ee392475_Portada_2.png" src="https://84static.loadingplay.com/static/images/f5597ace6645cb41a5d81922ee392475_Portada_2.png" width="94" height="119">
+                </a> 
+                <p>Nro 50</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/me_septiembre_2016__1_" target="_blank">
+                    <img class="img-responsive tam" class="https://84static.loadingplay.com/static/images/a641c28143d045f2a4f62e9eb20da27e_Captura_de_pantalla_de_2016-09-08_18:59:59.png" src="https://84static.loadingplay.com/static/images/a641c28143d045f2a4f62e9eb20da27e_Captura_de_pantalla_de_2016-09-08_18:59:59.png" width="94" height="119">
+                </a> 
+                <p>Nro 49</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/revista_me__48" target="_blank">
+                    <img class="img-responsive tam" class="alignnone size-full wp-image-6773" alt="Port_Edicion_2015.05" src="https://84static.loadingplay.com/static/images/f650f63a8694f912a140a00897de303a_Captura_de_pantalla_de_2016-06-29_14:13:37.png" width="94" height="119">
+                </a> 
+                <p>Nro 48</p>
+            </div>
+        </div>
+
+        <div style="height: 352px;">
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/revista_me_47" target="_blank">
+                    <img class="img-responsive tam" class="alignnone size-full wp-image-6773" alt="Port_Edicion_2015.05" src="https://84static.loadingplay.com/static/images/75845777b1022be1e2b45ef06031be31_page_1_thumb_large_47.png" width="94" height="119">
+                </a> 
+                <p>Nro 47</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/revista_me_46" target="_blank">
+                    <img class="img-responsive tam" class="alignnone size-full wp-image-6773" alt="Port_Edicion_2015.05" src="https://7static.loadingplay.com/static/images/2082d4623fb41de3ca1f9e6e2d5a1d79_page_1_thumb_large.png" width="94" height="119">
+                </a> 
+                <p>Nro 46</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a title="Revista Edicion Agosto 2015" href="https://issuu.com/memp/docs/edicion_agosto_me_2015.08" target="_blank">
+                    <img class="img-responsive tam" alt="Edicion_2015.08" src="https://image.isu.pub/150807150013-7540bf5c0c692686c720733ea46b9f6f/jpg/page_1_thumb_large.jpg" width="94" height="119">
+                </a>
+                <p>Nro 45</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/edicion_mayo_2015_me" target="_blank">
+                    <img class="img-responsive tam" class="alignnone size-full wp-image-6773" alt="Port_Edicion_2015.05" src="https://image.isu.pub/150529195610-bbffa0408422afdf02390e2c3f32d819/jpg/page_1_thumb_large.jpg" width="94" height="119">
+                </a> 
+                <p>Nro 44</p>
+            </div>
+        </div>
+
+        <div style="height: 352px;">
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/me_2014.12" target="_blank">
+                    <img class="img-responsive tam" class="alignnone size-full wp-image-6544" alt="Revista ME 2014.12" src="https://image.isu.pub/141215202052-247426915e27e41b8a4c2cb7f586ac14/jpg/page_1_thumb_large.jpg" width="94" height="119">
+                </a>
+                <p>Nro 43</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/me_octubre_2014.10">
+                    <img class="img-responsive tam" class="alignnone  wp-image-6282" alt="Port_RevME_2014.10" src="https://image.isu.pub/141007184210-915be196760b9fce1fb07c2d68044cb8/jpg/page_1_thumb_large.jpg" width="94" height="119">
+                </a>
+                <p>Nro 42</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/revista_me_julio.2014_-_41_" target="_blank">
+                    <img class="img-responsive tam" class="alignnone  wp-image-5435" alt="Revista ME 2014.07" src="https://image.isu.pub/140723200139-ffd21b13776698caf7ff9acf751ec06d/jpg/page_1_thumb_large.jpg" width="96" height="118">
+                </a>
+                <p>Nro. 41</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/me">
+                    <img class="img-responsive tam" class="alignnone  wp-image-5435" alt="Revista ME 2014.05" src="https://image.isu.pub/140513201528-0e4a2749e47964a3b0d9a2b6a4554d66/jpg/page_1_thumb_large.jpg" width="87" height="118">
+                </a>
+                <p>Nro. 40</p>
+            </div>
+        </div>
+
+        <div style="height: 352px;">
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/revistame_2013_12" target="_blank">
+                    <img class="img-responsive tam" alt="" src="https://image.isu.pub/131211190449-ddcb1fce319f087eb5a3e7bc86ad3256/jpg/page_1_thumb_large.jpg" width="87" height="118" border="0">
+                </a>
+                <p>Nro. 39</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/memp/docs/revista_me_octubre_2013" target="_blank">
+                    <img class="img-responsive tam" style="border: 0px;" alt="" src="https://image.isu.pub/131211185214-786913ea655db0f25dbdb5f1ee6f93bf/jpg/page_1_thumb_large.jpg" width="87" height="118" border="0">
+                </a>
+                <p>Nro. 38</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/revista_me_julio_2013" target="_blank">
+                    <img class="img-responsive tam" alt="" src="https://image.isu.pub/130722154006-39367430018179a425a72d1186268048/jpg/page_1_thumb_large.jpg" width="94" height="120" border="0">
+                </a>
+                <p>Nro. 37</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/memayo2013" target="_blank">
+                    <img class="img-responsive" alt="" src="https://image.isu.pub/130514144534-35d6a2f16c534895964be9e92bc7ee3d/jpg/page_1_thumb_large.jpg" width="98" height="118" border="0">
+                </a>
+                <p>Nro. 36</p>
+            </div>
+        </div>
+
+        <div style="height: 352px;">
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/revista_dic_2012" target="_blank">
+                    <img class="img-responsive tam" alt="" src="https://image.isu.pub/121218150754-56217a1063dc4c22bddb6b69fe49168b/jpg/page_1_thumb_large.jpg" width="88" height="113" border="0">
+                </a>
+                <p>Nro. 35</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/revista_octubre" target="_blank">
+                    <img class="img-responsive tam" alt="" src="https://image.isu.pub/121010192106-26b8141ae4554e06b9414c35b8eb1d5e/jpg/page_1_thumb_large.jpg" width="93" height="110" border="0">
+                </a>
+                <p>Nro. 34</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/revista_julio" target="_blank">
+                    <img class="img-responsive tam" alt="" src="https://image.isu.pub/121010190915-efe78b307ec747d4a43bfc786dc409dd/jpg/page_1_thumb_large.jpg" width="93" height="110" border="0">
+                </a>
+                <p>Nro. 33</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/me_mayo_2012" target="_blank">
+                    <img class="img-responsive tam" alt="" src="https://image.isu.pub/120514165831-aeccd7a23b38497998856c4c64cdc318/jpg/page_1_thumb_large.jpg" width="93" height="110" border="0">
+                </a>
+                <p>Nro. 32</p>
+            </div>
+        </div>
+
+        <div style="height: 352px;">
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/me_122011" target="_blank">
+                    <img class="img-responsive tm" title="Revista Diciembre" alt="" src="https://image.isu.pub/111214140945-3649c39671b44bcb871c3d95bb0473e1/jpg/page_1_thumb_large.jpg" width="93" height="110" border="0">
+                </a>
+                <p>Nro. 31</p>
+            </div>
+
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/revista_me_octubre" target="_blank">
+                    <img class="img-responsive tam" title="Revista Octubre" alt="" src="https://image.isu.pub/111013154147-274a67ef50a94856a032434124d4558a/jpg/page_1_thumb_large.jpg" width="93" height="118" border="0">
+                </a>
+                <p>Nro. 30</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/me_julio" target="_blank">
+                    <img class="img-responsive tam" title="Revista Julio" alt="" src="https://image.isu.pub/110720171347-df54eb7cb0cd497cbc1994c6f1b141ce/jpg/page_1_thumb_large.jpg" width="93" height="118" border="0">
+                </a>
+                <p>Nro. 29</p>
+           </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/me_mayo11" target="_blank">
+                    <img class="img-responsive tam" title="Revista Mayo" alt="" src="https://image.isu.pub/110505190301-b817ae7fa594420d9267023a2096fe2c/jpg/page_1_thumb_large.jpg" width="93" height="118" border="0">
+                </a>
+                <p>Nro. 28</p>
+            </div>
+        </div>
+
+        <div style="height: 352px;">
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/me_dic2010" target="_blank">
+                    <img class="img-responsive tam" title="Revista Diciembre" alt="" src="https://image.isu.pub/110317184935-e37f02302cf44acc8031fe52e052363e/jpg/page_1_thumb_large.jpg" width="93" height="118" border="0">
+                </a>
+                <p>Nro. 27</p>
+            </div>
+            
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/septiembre_2010" target="_blank">
+                    <img class="img-responsive tam" title="Revista Septiembre" alt="" src="https://image.isu.pub/100927161325-3ec106a6f1484dbeb9aa7ffc09fd41d7/jpg/page_1_thumb_large.jpg" width="93" height="118" border="0">
+                </a>
+                <p>Nro. 26</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/me_julio_2010_baja_final?viewMode=magazine" target="_blank">
+                    <img class="img-responsive tam" title="Revista Julio" alt="" src="https://image.isu.pub/100906172254-c08de5261d1147b1b5d893fc851296ac/jpg/page_1_thumb_large.jpg" width="93" height="118" border="0">
+                </a>
+                <p>Nro. 25</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/pdf_me_7mayo">
+                    <img class="img-responsive tam" title="" alt="" src="https://image.isu.pub/100513213531-3209c82bcefe48c2aa82ab7539f7eaa4/jpg/page_1_thumb_large.jpg" width="90" height="116" border="0">
+                </a>
+                <p>Nro. 24</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/me_diciembre_30_nov" target="_blank">
+                    <img class="img-responsive tam" title="" alt="" src="https://image.isu.pub/091202200056-597254c62fb74fadac7cf14f5f7e8298/jpg/page_1_thumb_large.jpg" width="90" height="116" border="0">
+                </a>
+                <p>Nro. 23</p>
+            </div>
+        </div>
+
+        <div style="height: 352px;">   
+            <div class="col-sm-3">
+                <a href="https://issuu.com/mujemp/docs/me_revista_noviembre_12_nov" target="_blank">
+                    <img class="img-responsive tam" title="" alt="" src="https://image.isu.pub/091112161650-c5e15d476b6047c8948ae43bd77a228b/jpg/page_1_thumb_large.jpg" width="91" height="117" border="0">
+                </a>
+                <p>Nro. 22</p>
+            </div>
+        </div>
+        <!--
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me21.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img21.jpg" width="91" height="117" border="0">
+            </a>
+            <p>Nro. 21</p
+        ></div>
+        
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me19.pdf" target="_bAlank">
+                <img class="img-responsive" title="me19" alt="" src="https://me.cl/wp-content/uploads/2013/12/img19.jpg" width="91" height="117" border="0">
+            </a>
+            <p>Nro. 19</p>
+        </div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me18.pdf" target="_blank">
+                <img class="img-responsive" title="img18" alt="" src="https://me.cl/wp-content/uploads/2013/12/img18.jpg" width="91" height="116" border="0">
+            </a>
+            <p>Nro. 18</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me17.pdf" target="_blank">
+                <img class="img-responsive" title="img17" alt="" src="https://me.cl/wp-content/uploads/2013/12/img17.jpg" width="91" height="118" border="0">
+            </a>
+            <p>Nro. 17</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me16.pdf" target="_blank">
+                <img class="img-responsive" title="img16" alt="" src="https://me.cl/wp-content/uploads/2013/12/img16.jpg" width="91" height="117" border="0">
+            </a>
+            <p>Nro. 16</p
+        ></div>
+        
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me15.pdf" target="_blank">
+                <img class="img-responsive" title="img15" alt="" src="https://me.cl/wp-content/uploads/2013/12/img15.jpg" width="90" height="116" border="0">
+            </a>
+            <p>Nro. 15</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me14.pdf" target="_blank">
+                <img class="img-responsive" title="img14" alt="" src="https://me.cl/wp-content/uploads/2013/12/img14.jpg" width="90" height="115" border="0">
+            </a>
+            <p>Nro. 14</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me13.pdf" target="_blank">
+                <img class="img-responsive" title="img13" alt="" src="https://me.cl/wp-content/uploads/2013/12/img13.jpg" width="90" height="116" border="0">
+            </a>
+            <p>Nro. 13</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me12.pdf" target="_blank">
+                <img class="img-responsive" alt="" src="https://me.cl/wp-content/uploads/2013/12/img12.jpg" width="90" height="116" border="0">
+            </a>
+            <p>Nro. 12</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me11.pdf" target="_blank">
+                <img class="img-responsive" title="img11" alt="" src="https://me.cl/wp-content/uploads/2013/12/img11.jpg" width="90" height="116" border="0">
+            </a>
+            <p>Nro. 11</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me10.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img10.jpg" width="90" height="116" border="0">
+            </a>
+            <p>Nro. 10</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me09.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img09.jpg" width="90" height="116" border="0">
+            </a>
+            <p>Nro. 09</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me08.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img08.jpg" width="90" height="115" border="0">
+            </a>
+            <p>Nro. 08</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me07.pdf" target="_blank">
+                <img class="img-responsive" title="img07" alt="" src="https://me.cl/wp-content/uploads/2013/12/img07.jpg" width="90" height="116" border="0">
+            </a>
+            <p>Nro. 07</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me06.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img06.jpg" width="90" height="116" border="0">
+            </a>
+            <p>Nro. 06</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me05.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img05.jpg" width="90" height="115" border="0">
+            </a>
+            <p>Nro. 05</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me04.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img04.jpg" width="90" height="115" border="0">
+            </a>
+            <p>Nro. 04</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me03.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img03.jpg" width="90" height="115" border="0">
+            </a>
+            <p>Nro. 03</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me02.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img02.jpg" width="90" height="115" border="0">
+            </a>
+            <p>Nro. 02</p
+        ></div>
+        <div class="col-sm-3" style="height: 220px;">
+            <a href="https://mujeresempresarias.cl/ims/rme/me01.pdf" target="_blank">
+                <img class="img-responsive" title="" alt="" src="https://me.cl/wp-content/uploads/2013/12/img01.jpg" width="90" height="115" border="0">
+            </a>
+            <p>Nro. 01</p
+        ></div>
+        -->
+    </div>
+{% end %}

@@ -1,0 +1,77 @@
+{% set box_counter = 0 %}
+
+
+{% for cnt in results %}
+    {% set box_index = 0 %}
+
+    {% if box_counter == 0 %}
+    <div class="row" >
+    <div class="col-sm-8 especial">
+        {% if cnt["content_type"] == "article" %}
+            {% include '../content/content_box/box_xl_article.html' %}
+        {% elif cnt["content_type"] == "event" %}
+            {% include '../content/content_box/box_xl_event.html' %}
+        {% elif cnt["content_type"] == "banner" %}
+            {% include '../content/content_box/box_xl_banner.html' %}
+        {% elif cnt["content_type"] == "profile" %}
+            {% include '../content/content_box/box_xl_profile.html' %}
+        {% elif cnt["content_type"] == "gallery" %}
+            {% include '../content/content_box/box_xl_gallery.html' %}
+        {% elif cnt["content_type"] == "product" %}
+            {% include '../content/content_box/box_xl_product.html' %}
+        {% end %}
+    </div>
+    {% elif box_counter == 1 %}
+    <div class="col-sm-4 especial">
+        {% if cnt["content_type"] == "article" %}
+            {% include '../content/content_box/box_m_article.html' %}
+        {% elif cnt["content_type"] == "event" %}
+            {% include '../content/content_box/box_m_event.html' %}
+        {% elif cnt["content_type"] == "banner" %}
+            {% include '../content/content_box/box_m_banner.html' %}
+        {% elif cnt["content_type"] == "profile" %}
+            {% include '../content/content_box/box_m_profile.html' %}
+        {% elif cnt["content_type"] == "gallery" %}
+            {% include '../content/content_box/box_m_gallery.html' %}
+        {% elif cnt["content_type"] == "product" %}
+            {% include '../content/content_box/box_m_product.html' %}
+        {% end %}
+        <!-- content -->
+    {% elif box_counter == 2 %}
+         {% if cnt["content_type"] == "article" %}
+            {% include '../content/content_box/box_m_article.html' %}
+        {% elif cnt["content_type"] == "event" %}
+            {% include '../content/content_box/box_m_event.html' %}
+        {% elif cnt["content_type"] == "banner" %}
+            {% include '../content/content_box/box_m_banner.html' %}
+        {% elif cnt["content_type"] == "profile" %}
+            {% include '../content/content_box/box_m_profile.html' %}
+        {% elif cnt["content_type"] == "gallery" %}
+            {% include '../content/content_box/box_m_gallery.html' %}
+        {% elif cnt["content_type"] == "product" %}
+            {% include '../content/content_box/box_m_product.html' %}
+        {% end %}
+    </div>
+    </div>
+    {% else %}
+
+    <div class="col-sm-4 sobre-botones caja-m">
+    {% if cnt["content_type"] == "article" %}
+        {% include '../content/content_box/box_m_article.html' %}
+    {% elif cnt["content_type"] == "event" %}
+        {% include '../content/content_box/box_m_event.html' %}
+    {% elif cnt["content_type"] == "banner" %}
+        {% include '../content/content_box/box_m_banner.html' %}
+    {% elif cnt["content_type"] == "profile" %}
+        {% include '../content/content_box/box_m_profile.html' %}
+    {% elif cnt["content_type"] == "gallery" %}
+        {% include '../content/content_box/box_m_gallery.html' %}
+    {% elif cnt["content_type"] == "product" %}
+        {% include '../content/content_box/box_m_product.html' %}
+    {% end %}
+    </div>
+
+    {% end %}
+
+    {% set box_counter += 1 %}
+{% end %}

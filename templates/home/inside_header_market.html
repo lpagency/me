@@ -1,0 +1,24 @@
+    <div class="inside-header">
+        <div id="main-nav" class="" style="position:absolute;width: 100%;">
+            <div class="container-fluid" style="max-width: 100%;padding: 0px;">
+                <div class="nav-header">
+                    <a href="{{ site_base }}/" class="nav-brand" style="border:0px;">
+                        <img class="logo-inside" style="width: 185px; margin-left: -65px;" src="{{ site_base }}/static/img/logo_Mujeres_empresarias_small.png">
+                    </a>
+                    <form action="{{ site_base }}/search" method="get">
+                        <input type="hidden" name="t" value="tags">
+                        <input type="text" name="search_query" value="{% try %}{% if not(tagsonly) %}{{ search_query }}{% end %}{% except %}{% end %}" class="buscar-header-market search-input" placeholder="BUSCAR">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- título pagina -->
+        <ul class="nav-list text-center effect menu-2 menu-3" style="left:0;">
+            <li class="titulo-paginas">{% block header_title %}{% end %}</li>
+        </ul>
+        <!-- título pagina -->
+        <!-- imagen fixed -->
+        <img src="https://7static.loadingplay.com/static/images/9021d0aeb0627bc6232d6f0f072f7008_Pequeno.png" class="show-hide" style="width:100%;">
+        <img src="https://7static.loadingplay.com/static/images/500_66deba84e7650a1c0139a34b6bce029e_Shopping_mobile.png" class="hide-show movil" style="width:100%;">
+        <!-- imagen fixed -->
+    </div>

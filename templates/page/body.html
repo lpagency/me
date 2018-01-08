@@ -1,0 +1,19 @@
+{% set box_counter = 0 %}
+{% for cnt in results %}
+    {% set box_index = 0 %}
+    <div class="col-sm-4 sobre-botones caja-m">
+    {% if cnt["content_type"] == "article" %}
+        {% include '../content/content_box/box_m_article.html' %}
+    {% elif cnt["content_type"] == "event" %}
+        {% include '../content/content_box/box_m_event.html' %}
+    {% elif cnt["content_type"] == "banner" %}
+        {% include '../content/content_box/box_m_banner.html' %}
+    {% elif cnt["content_type"] == "profile" %}
+        {% include '../content/content_box/box_m_profile.html' %}
+    {% elif cnt["content_type"] == "gallery" %}
+        {% include '../content/content_box/box_m_gallery.html' %}
+    {% elif cnt["content_type"] == "product" %}
+        {% include '../content/content_box/box_m_product.html' %}
+    {% end %}
+    </div>
+{% end %}

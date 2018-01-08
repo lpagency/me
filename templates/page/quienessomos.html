@@ -1,0 +1,61 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ page.name }}
+{% end %}
+
+{% block header %}
+{% include '../home/inside_header.html' %}
+<div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
+    <h1><span class="title-view" >{{ page.name }}</span></h1>
+</div>
+{% end %}
+
+{% block scripts %}
+
+{% if is_admin %}
+<script type="text/javascript">
+    $(document).editablepage({
+        page_name : "{{page.name}}",
+        page_keywords : "{{page.keywords}}",
+        page_uri : "{{page.uri}}",
+        body_url : site_base + "/page/{{ page.uri }}/body"
+    });
+</script>
+{% else %}
+<script type="text/javascript">
+    $(document).loadpagecontent({
+        body_url : site_base + "/page/{{ page.uri }}/body",
+        page_uri : "{{ page.uri }}"
+    });
+</script>
+{% end %}
+{% end %}
+
+{% block css %}
+<link type="text/css" rel='stylesheet' href="{{ site_base }}/static/css/page.edit.css" />
+{% end %}
+
+{% block body %}
+    <div id="wrap">
+        <!-- registration -->
+        <div class="container-fluid productlist">
+            <!-- raw 1 -->
+            <div class="row" style="    text-align: center;font-size: 16px;color: #676565;font-weight: 300;" >
+                <div class="container-fluid-art">
+                <p>Fundada el año 2001 por Francisca Valdés y Carolina Eterovic, Mujeres Empresarias (ME) es la primera Red de Líderes en Chile.</p>
+                </br>
+                <p>Somos una organización que apoya la gestión empresarial de la mujer, liderando a las empresarias, profesionales y emprendedoras a través de una gran e innovadora red de contactos que le permite su inclusión en el mundo económico y de los negocios.</p>
+                </br>
+                <p>Está integrada por más de 3 mil socias: emprendedoras, empresarias y ejecutivas quienes asisten a sus eventos, utilizan los diferentes servicios, se capacitan, forman redes y acceden a difusión en los medios</p>
+                </div>
+            </div>
+            <div class="row content-body">
+            </div>
+            <div class="carritoproductos clearfix">
+                <div class="flecha clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+{% end %}

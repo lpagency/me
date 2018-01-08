@@ -1,0 +1,140 @@
+.menu-material {
+    background-color: #d55d7c;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 30;
+    right: 50px;
+    z-index: 60;
+    border-radius: 30px;
+    font-size: 34px;
+    text-align: center;
+    padding: 12px 0px;
+    box-shadow: aqua;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 0.77);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 0.77);
+    box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 0.77);
+}
+.ul-filtro {
+    width: 280px;
+    position: fixed;
+    bottom: 120px;
+    right: 49px;
+    z-index: 8000;
+    
+    overflow: hidden;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 0.77);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 0.77);
+    box-shadow: 0px 0px 10px 0px rgba(136, 136, 136, 0.77);
+    color: gray;
+    font-size: 17px;
+    text-align: left;
+    /*background-image: url(/static/images/menu-material-2.png);*/
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+
+}
+
+
+.cover-material{
+}
+
+/* clases para menu deslizable */
+
+.nav-main-2 {
+  transition: left .25s ease-in-out;
+  background-color: rgba(246, 246, 246, 0.9);
+  overflow-x: hidden;
+  width: 280px;
+  left: 0px;
+  z-index: 4000;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(80, 80, 80);
+}
+
+.nav-main-2 .nav-container-2 {
+  transition: left .25s ease-in-out;
+  position: relative;
+  left: 0;
+  text-align: left;
+}
+
+.nav-main-2 .nav-container-2.show-sub-3 { left: -280px } 
+.nav-main-2 .nav-container-2.show-sub-2 { left: -560px } 
+.nav-main-2 .nav-container-2 ul {
+  margin: 0px;
+  padding: 10px 20px;
+}
+
+.nav-main-2 .nav-container-2 ul li {
+  list-style: none;
+  
+}
+
+.nav-main-2 .nav-container-2 ul li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 20px 0px 20px 10px;
+}
+
+.nav-main-2 .nav-container-2 ul li a:hover { color: #8F8F8F }
+
+.nav-main-2 .nav-container-2 ul li ul {
+  display: none;
+  width: 280px;
+  position: absolute;
+  right: -280px;
+  top: 0
+}
+
+.nav-main-2 .nav-container-2 ul li ul li ul {
+  display: none;
+  width: 280px;
+  position: absolute;
+  right: -280px;
+  top: 0
+}
+
+.nav-main-2 .nav-container-2 ul li ul li { border: 0 }
+
+.nav-main-2 .nav-container-2 ul li ul li.nav-label {
+  border-top: 1px solid #d5d7da;
+  padding: 25px 0 10px
+}
+
+.nav-main-2 .nav-container-2 ul li ul li a {
+  padding: 7px 0 15px;
+  font-size: 14px
+}
+
+.nav-main-2 .nav-container-2 ul li ul li a.back {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  /*
+    @todo: uncomment once implemented;
+    background: url(/static/menu/images/arrow-left.png) right center no-repeat;
+  */
+}
+
+.nav-main-2 .nav-container-2 ul li.has-sub-nav-2 a { background: url(/static/menu/images/arrow-right.png) right center no-repeat }
+
+.nav-main-2 .nav-container-2 ul li.has-sub-nav-2 ul a { background: 0 0 }
+
+.nav-main-2 .nav-container-2 ul li.active-2 ul { display: inline }
+
+.open .nav-main-2 { left: 0 }
+
+*,
+:after,
+:before { box-sizing: border-box }
+
+.has-sub-nav-2 p 
+{
+    cursor: pointer;
+}

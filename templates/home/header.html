@@ -1,0 +1,68 @@
+<!-- header normal inicio -->
+<div class="header-me-princ" style="background: url('https://static.loadingplay.com/static/images/1_51142b89d55d6482ffdd504488413333_banner_main.png')" >
+    <!-- menu principal -->
+    <!-- imagen header fixed -->
+    <div class="">
+                {% if is_admin %}
+                <div class="image-upload lapiz visible-movil show-hide">
+                   <label for="img_banner_header1">
+                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_banner_header1" name="image" id="img_banner_header1" >
+                </div>
+                {% end %}
+                {% if read_image(site.name + '_banner_header1', 1) != "" %}
+                <img id="{{ site.name }}_banner_header1" src="{{ read_image(site.name + '_banner_header1', 1) }}" data-original="{{ read_image(site.name + '_banner_header1', 500) }}" class="show-hide no-resize lazy" alt="" style="width:100%;height:600px;object-fit: cover;">
+                {% end %}
+    </div>
+
+    <!-- <img src="https://static.loadingplay.com/static/images/1_51142b89d55d6482ffdd504488413333_banner_main.png" data-original="https://static.loadingplay.com/static/images/51142b89d55d6482ffdd504488413333_banner_main.png" class="show-hide no-resize lazy" style="width:100%;"> -->
+
+    <div class="">
+                {% if is_admin %}
+                <div class="image-upload lapiz visible-movil hide-show">
+                   <label for="img_banner_header1_2">
+                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_banner_header1_2" name="image" id="img_banner_header1_2" >
+                </div>
+                {% end %}
+                {% if read_image(site.name + '_banner_header1', 1) != "" %}
+                <img id="{{ site.name }}_banner_header1_2" src="{{ read_image(site.name + '_banner_header1_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_header1_2',500) }}'" class="hide-show" alt="" style="width:100%;object-fit: cover;height: 430px;">
+                {% end %}
+    </div>
+
+
+    <!-- <img src="https://static.loadingplay.com/static/images/500_0b0b0d0508800c44953c1b8a109671fc_banner_home_copy.png" class="hide-show" style="width:100%; height: 430px;"> -->
+
+    <!-- imagen header fixed -->
+    <div id="main-nav" class="" style="position:absolute;width: 100%;top:0">
+        <div class="container-fluid" style="max-width: 100%;padding: 0px;">
+            <div class="nav-header">
+                <a href="{{ site.url }}" class="nav-brand" style="border:0px;">
+                    <img src="{{ site_base }}/static/img/logo_Mujeres_empresarias_small.png">
+                </a>
+                <form action="{{ site_base }}/search" method="get">
+                    <input type="hidden" name="t" value="tags">
+                    <input type="text" name="search_query" value="{% try %}{{ search_query }}{% except %}{% end %}" class="buscar-header-norm search-input" placeholder="Buscar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- menu principal -->
+    <ul class="nav-list text-center effect menu-2" style="left:0;top:0">
+        <li style="background-color:rgba(64, 153, 172, 0.7)">
+            <a href="{{ site_base }}/conocenos">Conócenos</a>
+        </li>
+        <li style="background-color:rgba(66, 76, 141, 0.7);">
+            <a href="{{ site_base }}/emprende">Emprende</a>
+        </li>
+        <li style="background-color:rgba(123, 87, 190, 0.7);">
+            <a href="{{ site_base }}/unete">Únete</a>
+        </li>
+        <li style="background-color:rgba(234, 81, 81, 0.7)">
+            <a href="{{ site_base }}/market">Market ME</a>
+        </li>
+    </ul>
+</div>
+<!-- header normal fin-->

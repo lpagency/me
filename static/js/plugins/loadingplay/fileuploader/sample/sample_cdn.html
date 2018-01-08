@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/dist/fileuploader.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>File uploader</h1>
+
+    <div>
+        <input type="file" name="file" />
+        <div style="clear:both" ></div>
+    </div>
+    <hr />
+
+    <div>
+        <input type="file" name="file-preloaded-multi" />
+        <div style="clear:both" ></div>
+    </div>
+    <hr />
+
+    <script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/dist/fileuploader.js"></script>
+    <script type="text/javascript">
+    /* jshint ignore:start */
+    $(document).ready(function()
+    {
+        var cdn_url = 'https://static.loadingplay.com/image/upload';
+        //var cdn_url = 'http://localhost:8515/image/upload';
+        $("input[name=file]").fileuploader({
+            'uploadurl' : cdn_url,
+            'highlight_spot' : 'true',
+            'files_supported' : '.png|.jpg|.pdf|.doc|.docx'
+        });
+
+        //$("input[name=file]").fileuploader('somefunction');
+        //$("input[name=file-preloaded-multi]").fileuploader('somefunction');
+
+        $("input[name=file-preloaded-multi]").fileuploader({
+            'uploadurl' : cdn_url,
+            'thumbnail' : 'thumb_200',
+            'thumbnail_origin' : 'remmote',
+            'highlight_spot' : 'true',
+            'sortable' : true,
+            'images' : [
+            {
+                name : "foo.png",
+                src : "https://static.loadingplay.com/static/images/982bf0138e4ee5c5c00d7defa61f9e95_bug_1.png.png",
+                value : { "url" : "https://static.loadingplay.com/static/images/982bf0138e4ee5c5c00d7defa61f9e95_bug_1.png.png", "thumb_200" : "https://static.loadingplay.com/static/images/200_982bf0138e4ee5c5c00d7defa61f9e95_bug_1.png.png"},
+            },
+            {
+                name : "foo.png",
+                src : "https://static.loadingplay.com/static/images/982bf0138e4ee5c5c00d7defa61f9e95_bug_1.png.png",
+                value : { "url" : "https://static.loadingplay.com/static/images/982bf0138e4ee5c5c00d7defa61f9e95_bug_1.png.png", "thumb_200" : "https://static.loadingplay.com/static/images/200_982bf0138e4ee5c5c00d7defa61f9e95_bug_1.png.png"},
+            }
+            ]
+        });
+    });
+
+    /* jshint ignore:end */
+    </script>
+</body>
+</html>

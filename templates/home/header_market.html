@@ -1,0 +1,37 @@
+<!-- header normal inicio -->
+<div class="header-me-princ" style="background: url('https://7static.loadingplay.com/static/images/dbbf2ba9fec33fa95934a4c884f6b5f9_grande.png') no repeat;" >
+    <!-- menu principal -->
+    <!-- imagen header fixed -->
+    <img src="https://7static.loadingplay.com/static/images/dbbf2ba9fec33fa95934a4c884f6b5f9_grande.png" data-original="https://7static.loadingplay.com/static/images/dbbf2ba9fec33fa95934a4c884f6b5f9_grande.png" class="show-hide no-resize lazy" style="width:100%; object-fit: cover; height:600px; ">
+    <img src="https://7static.loadingplay.com/static/images/500_66deba84e7650a1c0139a34b6bce029e_Shopping_mobile.png" class="hide-show" style="width:100%; height: 430px;">
+    <!-- imagen header fixed -->
+    <div id="main-nav" class="" style="position:absolute;width: 100%;top:0">
+        <div class="container-fluid" style="max-width: 100%;padding: 0px;">
+            <div class="nav-header">
+                <a href="{{ site.url }}" class="nav-brand" style="border:0px;">
+                    <img src="{{ site_base }}/static/img/logo_Mujeres_empresarias_small.png">
+                </a>
+                <form action="{{ site_base }}/search" method="get">
+                    <input type="hidden" name="t" value="tags">
+                    <input type="text" name="search_query" value="{% try %}{{ search_query }}{% except %}{% end %}" class="buscar-header-market search-input" placeholder="Buscar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- menu principal -->
+    <ul class="nav-list text-center effect menu-2" style="left:0;top:0">
+        <li style="background-color:rgba(64, 153, 172, 0.7)">
+            <a href="{{ site_base }}/conocenos">Conócenos</a>
+        </li>
+        <li style="background-color:rgba(66, 76, 141, 0.7);">
+            <a href="{{ site_base }}/emprende">Emprende</a>
+        </li>
+        <li style="background-color:rgba(123, 87, 190, 0.7);">
+            <a href="{{ site_base }}/unete">Únete</a>
+        </li>
+        <li style="background-color:rgba(234, 81, 81, 0.7)">
+            <a href="{{ site_base }}/market">Market ME</a>
+        </li>
+    </ul>
+</div>
+<!-- header normal fin-->

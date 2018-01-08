@@ -1,0 +1,100 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ page.name }}
+{% end %}
+
+{% block header %}
+{% include '../home/inside_header_profile.html' %}
+<div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
+    <!-- <h1><span class="title-view" >{{ page.name }}</span></h1> -->
+    {% if is_admin %}
+    <h4><span class="keywords-view">{{ page.keywords }}</span></h4>
+    {% end %}
+</div>
+{% end %}
+
+{% block scripts %}
+
+<script type="text/javascript" src="{{ site_base }}/common/js/editablelink.js"></script>
+{% if is_admin %}
+<script type="text/javascript">
+    $(document).editablepage({
+        page_name : "{{page.name}}",
+        page_keywords : "{{page.keywords}}",
+        page_uri : "{{page.uri}}",
+        body_url : site_base + "/page/{{ page.uri }}/body"
+    });
+</script>
+{% else %}
+<script type="text/javascript">
+    $(document).loadpagecontent({
+        body_url : site_base + "/page/{{ page.uri }}/body",
+        page_uri : "{{ page.uri }}"
+    });
+</script>
+{% end %}
+
+{% end %}
+
+{% block css %}
+<link type="text/css" rel='stylesheet' href="{{ site_base }}/static/css/page.edit.css" />
+{% end %}
+
+{% block body %}
+
+{% if is_admin %}
+{% set editabletext = 'editabletext' %}
+{% else %}
+{% set editabletext = '' %}
+{% end %}
+
+    <section class="h_first_text pad0">
+        <div class="container-fluid">
+            <div class="col-md-12 col-sm-12 box">
+                <h1 class="text_main {{editabletext}}" text-id="{{ site.name + '_text_legal' }}"> {{ read_text(site.name +  '_text_legal') }}
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid">
+                <div class="col-md-12 col-sm-12 col-xs-12 pad0">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="video-container">
+                                <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/z9Ul9ccDOqE" frameborder="0" allowfullscreen>
+                                </iframe> -->
+                                <a id="{{ site.name + '_' }}" href="{{ read_link(site.name + '_img_legal1') }}" >
+                                    {{ read_link(site.name + '_img_legal1') }}
+                                </a>
+
+                                <iframe id="{{ site.name }}_legal1" src="{{ read_link(site.name + '_img_legal1') }}" width="853" height="480" src="" frameborder="0" allowfullscreen>
+                                </iframe>
+
+                                <!--editable link-->
+                                {% if is_admin %}
+                                <img class="change-image editablelink" link-id="{{ site.name + '_img_legal1' }}" content="{{ read_link(site.name + '_img_legal1') }}" src="https://7static.loadingplay.com/static/images/41664a512d21bc8d33cfea94bce3b63e_link.png" style="top: 20px; z-index: 2000!important;">
+                                {% end %}
+                            </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="video-container">
+                                 <a id="{{ site.name + '_' }}" href="{{ read_link(site.name + '_img_legal2') }}" >
+                                    {{ read_link(site.name + '_img_legal2') }}
+                                </a>
+
+                                <iframe id="{{ site.name }}_legal2" src="{{ read_link(site.name + '_img_legal2') }}" width="853" height="480" src="" frameborder="0" allowfullscreen>
+                                </iframe>
+
+                                <!--editable link-->
+                                {% if is_admin %}
+                                <img class="change-image editablelink" link-id="{{ site.name + '_img_legal2' }}" content="{{ read_link(site.name + '_img_legal2') }}" src="https://7static.loadingplay.com/static/images/41664a512d21bc8d33cfea94bce3b63e_link.png" style="top: 20px; z-index: 2000!important;">
+                                {% end %}
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+{% end %}

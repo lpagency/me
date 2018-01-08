@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- head bt inicio -->
+        <title>ME - </title>
+        <base href="/me/">
+        <meta charset="utf-8">
+        <meta name="description" content="StellaShop - Elegant E-Commerce Theme from angelostudio.net">
+        <meta name="author" content="ANGELOSTUDIO.NET">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/style.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/icomoon/style.css">
+        <!-- css para estilos de cajas de contenido -->
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/cont-boxes-home.css">
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/font-awesome.min.css" />
+        <link rel="shortcut icon" href="{{ site_base }}/static/imgbt/ico/32.png" sizes="32x32" type="{{ site_base }}/static/imagebt/png" />
+        <link rel="apple-touch-icon-precomposed" href="imgbt/ico/60.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site_base }}/static/imgbt/ico/72.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site_base }}/static/imgbt/ico/120.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site_base }}/static/imgbt/ico/152.png" type="image/png" />
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <!-- <link rel="stylesheet" href="{{ site_base }}/static/css/custom_bootstrap.css"> -->
+        <!-- menu editor css -->
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/main.css" type="text/css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/wallop-slider--slide.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/wallop-slider.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/colpick.css">
+        <!-- menu editor css -->
+        <link rel="stylesheet" href="{{ site_base }}/static/css/menu-material-2.css">
+        <!-- <link rel="stylesheet" href="{{ site_base }}/static/css/store.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/simplePagination.css"> -->
+        <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/gallery.css">
+        <!-- autocomplete -->
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/js/plugins/selectize/selectize.css" />
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/me.css">
+        <!-- autocomplete -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+        [data-sr] { visibility: hidden; }
+        </style>
+    </head>
+    <body id="home">
+        <!-- header -->
+        <!-- header fixed inicio-->
+        <!-- header fixed fin-->
+        <!-- header normal inicio -->
+        <div class="bg-black-magle">
+            <ul class="nav-list text-center effect menu-4 container-fluid-magle">
+                <li class=""><a href="{{ site_base }}/">Home</a></li>
+                <li><a href="{{ site_base }}/aboutus">about us</a></li>
+                <li><a href="{{ site_base }}/contact">Contact</a></li>
+                <li><a class="mlb-register" style="cursor: pointer;" >sing in</a></li>
+                <li><a class="mlb-register" style="cursor: pointer;" >Register</a></li>
+            </ul>
+        </div>
+        <div class="line-bottom-magle ">
+            <div class="nav-header container-fluid-magle" style="text-align: left; display: block; ">
+                <!--logo -->
+                <a href="{{ site_base }}" >
+                    <img class=""src="{{ site_base }}/static/img/mlb_logo.jpg" height="50px">
+                </a>
+                <i class="fa icon-shopping-cart mlb-open-cart" style="  color: black; float: right; font-size: 28px; padding: 4px; margin-left: 20px;"></i>
+                <form action="{{ site_base }}/search" method="get" style="display: inline-block; float: right;">
+                    <input type="text" name="search_query" value="{% try %}{{ search_query }}{% except %}{% end %}" class="buscar-header-norm search-input" placeholder="BUSCAR" style="border: 1px solid gray;">
+                </form>
+                <!-- add cart product -->
+                <div class="mlb-btn mlb-cart-add-products" style="display:none;">
+                    <div style="  position: absolute;margin-top: -20px;right: 16px;">
+                        <img src="{{ site_base }}/static/img/triangle.png"  height="17px">
+                    </div>
+                    <div class="container-fluid cart-list" ng-controller="">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th class="text-center">Cant</th>
+                                            <th class="text-right"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="vert-align">Producto</td>
+                                        <td class="vert-align">$47.000</td>
+                                        <td class="text-center vert-align">2</td>
+                                        <td class="text-center vert-align"><a class="borrarproducto" cart-id=""><i class="icon-remove"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-12" ng-if="">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">Resumen Pedido</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sub total:</td>
+                                        <td></td>
+                                        <td class="text-right"><b>$47.000</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total:</td>
+                                        <td></td>
+                                        <td id="total" class="text-right">$47.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="location.href='{{ site_base }}/checkout'" type="button" class="btn add-to-cart" product-id="7">checkout</button>
+                <button onclick="location.href='{{ site_base }}/cart'" type="button" class="btn add-to-cart" product-id="7">cart</button>
+            </div>
+            <!-- add cart product -->
+        </div>
+    </div>
+    <!-- menu secundario -->
+    <div class="line-bottom-magle">
+        <ul class="nav-list text-center effect menu-3 container-fluid-magle">
+            <li class=""><a href="/">Livingroom</a></li>
+            <li><a href="/contact">dinnerroom</a></li>
+            <li><a href="/auth/login">kitchen</a></li>
+            <li><a href="/auth/login">bedroom</a></li>
+        </ul>
+    </div>
+    <div class="header-me-princ" >
+        <div id="main-nav" class="">
+            <div class="container-fluid">
+                
+            </div>
+        </div>
+    </div>
+    <!-- header normal fin-->
+</div>
+<!-- header -->
+<h2>Oops!</h2>
+<p>ha ocurrido un erorr : <a href="/">volver</a></p>
+{% if site_base != "" %}
+    <div >{{ error }}</div>
+{% else %}
+    <div class="error" style="display:none" >{{ error }}</div>
+{% end %}
+<!-- <script src="{{ site_base }}/static/js/rimages.js"></script> -->
+<!--<script src="{{ site_base }}/static/js/fix_ie9.js"></script>-->
+<script type="text/javascript">
+var site_base = "/me"
+</script>
+<script type="text/javascript" src="{{ site_base }}/static/js/jquery-min.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<script src="{{ site_base }}/static/js/giani_functions.js"></script>
+<script src="{{ site_base }}/static/js/giani.js"></script>
+<!-- bt inicio -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/jsbt/placeholders.min.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/jsbt/custom.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/jsbt/ga.js"></script>
+<!-- bt fin -->
+<!-- menu editor js -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{{ site_base }}/static/menu/js/modernizr.js"></script>
+<script src="{{ site_base }}/static/menu/js/main.js"></script>
+<script src="{{ site_base }}/static/menu/js/WallopSlider.js"></script>
+<script src="{{ site_base }}/static/menu/js/script.js"></script>
+<script src="{{ site_base }}/static/menu/js/colpick.js"></script>
+<!-- menu editor js -->
+<script src="{{ site_base }}/static/js/menu-material-2.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/ligthbox-d.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/plugins/selectize/selectize.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/plugins/loadingplay/imageupload.preview.js" ></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/plugins/jquery.maskedinput.min.js" ></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/me.js" ></script>
+<!-- wysihtml5 parser rules -->
+<script src="{{ site_base }}/static/bower_components/wysihtml/parser_rules/advanced.js"></script>
+<!-- wysihtml5 Library -->
+<script src="{{ site_base }}/static/bower_components/wysihtml/dist/wysihtml5-0.3.0.min.js"></script>
+<!-- initialize wysihtml5-->
+<script type="text/javascript" src="{{ site_base }}/static/js/gallery/add.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/article/add_image_article.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/wysiwyg/add_wysi.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/validation/form_validation.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/page/add.js"></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/content/add.js"></script>
+<script type="text/javascript" >
+$(document).ajaxComplete(function()
+{
+$('input[name=tags]').selectize({
+persist: false,
+maxItems: null,
+valueField: 'label',
+labelField: 'label',
+searchField: ['label'],
+options: [],
+render: {
+item: function(item, escape) {
+return '<div class="g-contenedor-tag-seleccionado" >' +
+        '<div>' + escape(item.label) + '</div>'+
+'</div>';
+},
+option: function(item, escape) {
+return '<div >' +
+        '<span class="caption" style="color:gray;">' + escape(item.label) + '</span>' +
+'</div>';
+}
+},
+load: function(input, callback)
+{
+var self = this;
+var options = [];
+$.get(
+"/me/tag/autocomplete?search_query=" + input,
+function(data)
+{
+var json = $.parseJSON(data);
+for (var i = 0; i < json.length; i++) {
+options.push({
+"label" : json[i].label
+});
+}
+callback(options);
+});
+},
+createFilter: function(input) {
+return true;
+},
+create: function(input) {
+return { label: input };
+}
+});
+});
+</script>
+<script type="text/javascript">
+$('#picker').colpick({
+flat: true,
+layout: 'hex',
+submit: 0
+});
+</script>
+<script>
+window.fbAsyncInit = function() {
+FB.init({
+appId: '348231912006000',
+xfbml: true,
+version: 'v2.1'
+});
+};
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) {
+return;
+}
+js = d.createElement(s);
+js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript" src="{{ site_base }}/static/js/header.js" ></script>
+<script src="{{ site_base }}/static/js/scrollReveal.min.js?ver=2.1.0"></script>
+<script type="text/javascript">
+window.sr= new scrollReveal({
+reset: true,
+move:"20px"
+});
+</script>
+</body>
+</html>

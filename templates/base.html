@@ -1,0 +1,753 @@
+f<!doctype html>
+<html>
+    <head>
+        <!-- head bt inicio -->
+        <title>Mujeres Empresarias - Mujeres Empresarias por el desarrollo de Chile.</title>
+        <base href="{{ site_base }}/">
+        <meta charset="utf-8">
+
+        <meta name="description" content="Fundada el año 2001 por Francisca Valdés y Carolina Eterovic, Mujeres Empresarias (ME) es la primera Red de Líderes en Chile.">
+        <meta name="og:description" content="Fundada el año 2001 por Francisca Valdés y Carolina Eterovic, Mujeres Empresarias (ME) es la primera Red de Líderes en Chile.">
+
+        <meta name="og:image" content="https://me.cl/static/img/logo_Mujeres_empresarias_small.png" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=500, user-scalable=no">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/style.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/icomoon/style.css">
+        <!-- css para estilos de cajas de contenido -->
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/cont-boxes-home.css">
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/font-awesome-4.3.0/css/font-awesome.min.css" />
+        <link rel="shortcut icon" href="{{ site_base }}/static/imgbt/ico/favicon-32x32.png" sizes="32x32" type="{{ site_base }}/static/imagebt/png" />
+        <link rel="apple-touch-icon-precomposed" href="imgbt/ico/apple-touch-icon-60x60.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site_base }}/static/imgbt/ico/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site_base }}/static/imgbt/ico/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site_base }}/static/imgbt/ico/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <!-- <link rel="stylesheet" href="{{ site_base }}/static/css/custom_bootstrap.css"> -->
+        <!-- menu editor css -->
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/main.css" type="text/css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/wallop-slider--slide.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/wallop-slider.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/colpick.css">
+        <!-- menu editor css -->
+        <link rel="stylesheet" href="{{ site_base }}/static/css/menu-material-2.css">
+        <!-- <link rel="stylesheet" href="{{ site_base }}/static/css/store.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/simplePagination.css"> -->
+        <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css">
+        <!-- autocomplete -->
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/js/plugins/selectize/selectize.css" />
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/me.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/js/plugins/loadingplay/fileuploader/dist/fileuploader.css" />
+        <link rel="stylesheet" href="{{ site_base }}/static/css/gallery.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/js/nprogress-master/nprogress.css">
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/css/editableimage.css">
+
+        <!-- autocomplete -->
+        {% block css %}{% end %}
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body id="home">
+        <!-- generar contenido y formularios -->
+        <div id="menu_movil" class="descripcion_wrapper descripcion_opacity b_wrapper" style="display:none;">
+            <div class="descripcion_cerrar">
+                <button id="tellmeboton2" style="font-size: 35px; color:gray !important"><i class="icon-remove"></i></button>
+            </div>
+            <div class="descripcion_contenido" style="height:100%">
+            </div>
+        </div>
+        <!-- generar contenido y formularios -->
+        <div id="cuerpo" style="width: 100%">
+            <!-- editor menu -->
+            <!-- <button class="button-nav-toggle" style="width:40px;height:40px;"></button> -->
+            <div class="menu">
+                <nav class="nav-main">
+                    <div class="nav-container">
+                        <ul>
+                            <li class="menu-ti">EDITOR ESTILO</li>
+                            <li class="menu-st">Header</li>
+                            <li class="menu-te">
+                                <a href="javascript:void(0)">menu</a>
+                                <ul>
+                                    <li class="menu-ti"><a href="javascript:void(0)" class="back"><strong>Tipos de menu</strong></a></li>
+                                    <li class="menu-te"><a href="javascript:void(0)">Menu 1</a></li>
+                                    <li class="menu-te"><a href="javascript:void(0)">menu 2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-te">
+                                <a href="javascript:void(0)">Logo</a>
+                                <ul>
+                                    <li class="menu-ti"> <a href="javascript:void(0)" class="back"><strong>Logo</strong></a></li>
+                                    <button class="btn-menu">Subir imagen</button>
+                                    <!-- <input class="" type="file" name="imagen" id="imagen" /> -->
+                                </ul>
+                            </li>
+                            <li class="menu-st">Contenedor</li>
+                            <li class="menu-te">
+                                <a href="javascript:void(0)">color fondo</a>
+                                <ul>
+                                    <li class="menu-ti"> <a href="javascript:void(0)" class="back"><strong>color fondo</strong></a></li>
+                                    <li>
+                                        <div id="picker"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-te">
+                                <a href="javascript:void(0)">productos</a>
+                                <ul>
+                                    <li class="menu-ti"> <a href="javascript:void(0)" class="back"><strong>Productos</strong></a></li>
+                                    <li class="menu-te" style="float: left;width: 100%;height: 70px;">
+                                        <div class="" style="float:left;margin-top: 14px;width: 20px;height: auto;">X</div>
+                                        <div class="" style="float:left;float: left;width: 30px;height: auto;margin-top: 14px;">fila</div>
+                                        <!-- slider -->
+                                        <div class="photo-slider wallop-slider wallop-slider--slide" style="float: right;width: 120px;height: auto;margin-right: 18px;">
+                                            <div style="width:100%; height:auto; overflow:hidden; position:relative;">
+                                                <ul class="wallop-slider__list" style="right:0; position: inherit; padding: 0px;width: 100%;">
+                                                    <li class="wallop-slider__item wallop-slider__item--current"><img src="{{ site_base }}/static/menu/images/row1.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row2.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row3.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row4.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row5.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row6.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row7.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row8.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row9.png"></li>
+                                                </ul>
+                                            </div>
+                                            <button class="wallop-slider__btn wallop-slider__btn--previous btn btn--previous wallop-btn-base" disabled style="top: 13px;left: -29px;">
+                                            </button>
+                                            <button class="wallop-slider__btn wallop-slider__btn--next btn btn--next wallop-btn-base" style="top: 13px;right: -29px;">></button>
+                                        </div>
+                                        <!-- slider -->
+                                    </li>
+                                    <button class="btn-menu btn-menu-top">+ agregar row</button>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul style="top:0px;">
+                            <li class="menu-st">Diseños anteriores</li>
+                            <li class="menu-te">
+                                <a href="javascript:void(0)">todos los diseños</a>
+                                <ul>
+                                    <li class=""> <a href="javascript:void(0)" class="back"><strong>DISEÑOS ANTERIORES</strong></a></li>
+                                    <li><a href="javascript:void(0)">Diseño 1</a></li>
+                                    <li><a href="javascript:void(0)">Diseño 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="campo_guardar" style="bottom: 0;position: absolute;display:none;">
+                        <input class="campo_guandar_input" type="text" placeholder="NOMBRE DISEÑO">
+                        <button class="btn-menu">Guardar</button>
+                    </div>
+                    <div class="campo_guardar" style="bottom: 0;position: absolute;">
+                        <button class="btn-menu">actualizar</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- editor menu -->
+        <!-- header -->
+        <!-- header fixed inicio-->
+        <div id="main-nav-fixed-navigation" class="fixed-menu-me">
+            <a href="{{ site_base }}" class="nav-brand" style="border:0px;text-align: left; ">
+            <img style="width: 60%;" src="{{ site_base }}/static/img/logome2.jpg">
+            </a>
+            <div class="busqueda-movil-material hide-show">
+               <a href="{{ site_base }}/buscar" class="fancybox fancybox.iframe">
+                <i class="icon-search" <i class="icon-search" style="color: white;position: relative;right: 14px;bottom: 1px;"></i>
+                </a> 
+            </div>
+            <form action="{{ site_base }}/search" method="get">
+                <input type="hidden" name="t" value="tags">
+                <input type="text" name="search_query" value="{% try %}{% if not(tagsonly) %}{{ search_query }}{% end %}{% except %}{% end %}" placeholder="BUSCAR" class="show-hide search-input" />
+            </form>
+        </div>
+        <!-- header fixed fin-->
+        {% block header %}{% end %}
+        <!-- boton para navegar -->
+        <span id="drag-mini-image-container"style="left: 500px; top: 200px; visibility: hidden; position: absolute; z-index: 4000;">
+        <img id="drag-mini-image" src="" style="height: 60px; opacity: 0.7;"></i>
+        </span>
+        <!-- botón agregar -->
+        <span class="btn-menu-bottom btn-categories">        
+        <i class="icon-list"></i>
+        </span>
+        <span class="btn-menu-bottom btn-edit-menu" style="background-color: rgb(111, 46, 128); right: 10px; bottom: 20px; z-index: 3000; display: none;">
+        <i class="fa fa-cog"></i>
+        </span>
+        <span class="btn-add-menu-item button-edit-item" style="display: none;">
+        <i class="icon-plus"></i>
+        </span>
+        <div id="menu-material-4" class="ul-filtro">
+            <nav class="nav-main-2">
+                <div class="nav-container-2">
+                    <ul id="menu-list-main">
+                        <li id="first" class="menu-li-first" style="background-color:rgba(234, 81, 81, 1);">
+                            <a class="menu-link-first" href="javascript:void(0)" style=" color:white; width: 100%;">Market ME </a>
+                            <ul>
+                                <li class="two" style="background-color:rgba(234, 81, 81, 1);">
+                                    <p class="back">Volver</p>
+                                </li>
+                                <li class=""><a href="{{ site_base }}/alimentosygourmet">Alimentos y Gourmet</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/disenoydecoracion">Diseño y Decoración</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/vestuarioyaccesorios">Vestuario y Accesorios</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/saludybelleza">Salud y Belleza</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/serviciosyasesorias">Servicios y Asesorías</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/otrascategorias">Otras Categorías</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                            </ul>
+                        </li>
+                        <li id="first" class="menu-li-first" style="background-color:rgb(123, 87, 190);">
+                            <a class="menu-link-first" href="javascript:void(0)" style=" color:white; width: 100%;" href="{{ site_base }}/hazte_socia" >Únete</a>
+
+                            <ul>
+                                <li class="" style="background-color:rgb(123, 87, 190);">
+                                    <p href="javascript:void(0)" class="back">Volver</p>
+                                </li>
+                                <li class=""><a href="{{ site_base }}/#">Únete</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="https://www.me.cl/redme">RED ME</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/plancrece">Asesorías Crece</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/sociasdestacadas">Socias Destacadas</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/actividadesyeventos">Actividades y Eventos</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/reddeconsultores">Red de Consultores</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/alianzasestrategicas">Alianzas Estratégicas</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                            </ul>
+                        </li>
+                        <li id="first" class="menu-li-first" style="background-color:rgb(66, 76, 141);">
+                            <a class="menu-link-first" href="javascript:void(0)" style=" color:white; width: 100%;">Emprende</a>
+
+                            <ul>
+                                <li class="" style="background-color:rgb(66, 76, 141);">
+                                    <p href="javascript:void(0)" class="back">Volver</p>
+                                </li>
+                                <li class=""><a href="https://www.me.cl/redme">RED ME</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/plancrece">Plan Crece</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/aceleradora">Aceleradora</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/inversionistasmcapital">MCapital</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/weconnect">WEConnect</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/reddeconsultores">Red de Consultores</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/alianzasestrategicas">Alianzas Estratégicas</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                            </ul>
+                        </li>
+                        <li id="first" class="menu-li-first" style="background-color:rgb(64, 153, 172);">
+                            <a class="menu-link-first" href="javascript:void(0)" style=" color:white; width: 100%;">Conócenos</a>
+
+                            <ul>
+                                <li class="" style="background-color:rgb(64, 153, 172);">
+                                    <p href="javascript:void(0)" class="back">Volver</p>
+                                </li>
+                                <li class=""><a href="{{ site_base }}/quienessomos">Quiénes Somos</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/quehacemos">Qué Hacemos</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/formacionme">Formación ME</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/sociasdestacadas">Socias Destacadas</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/actividadesyeventos">Actividades y Eventos</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/auspiciadores">Auspiciadores</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/revistame">Revista ME</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/contactanos">Contáctanos</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                            </ul>
+                        </li>
+                        <!--li id="first" class="" style="background-color:rgb(66, 76, 141);">
+                            <a href="javascript:void(0)" style=" color:white;">Some option</a>
+                            <ul>
+                                <li class="" style="background-color:rgb(66, 76, 141);">
+                                    <p href="javascript:void(0)" class="back">Volver</p>
+                                </li>
+                                <li class=""><a href="{{ site_base }}/quienessomos">Quienes Somos</a></li>
+                                <li class=""><a href="{{ site_base }}/quehacemos">Qué Hacemos</a></li-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- header -->
+        {% block body %}
+        {% end %}
+        <!-- <script src="{{ site_base }}/static/js/rimages.js"></script> -->
+        <!--<script src="{{ site_base }}/static/js/fix_ie9.js"></script>-->
+        <div class="menu-editor-container prop-stoper" style="border-style: solid; border-width: 5px; position: absolute; top: 100px; position: fixed; z-index: 8000; background-color:rgba(0, 0, 0, 0.2); display: none;">
+            <p id="edit-window-title" style="color: white;">Editar:</p>
+            <span style="color: white;">Nombre </span><input id="input-name-editor" type="text"><br><br>
+            <button id="button-done-editor" type="button">done</button>
+            <button id="button-erase-editor" type="button">erase</button>
+        </div>
+        <script type="text/javascript">
+                {% from tornado.options import options %}
+                var site_base = "{{ site_base }}";
+                var content_manager_url = "{{ options.content_manager_url }}";
+        </script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+        <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.js"></script>
+        <!--<script type="text/javascript" src="{{ site_base }}/static/js/jquery-min.js"></script>-->
+        <script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+        <script src="{{ site_base }}/static/js/giani_functions.js"></script>
+        <script src="{{ site_base }}/static/js/giani.js"></script>
+        <!-- bt inicio -->
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/jsbt/placeholders.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/jsbt/custom.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/jsbt/ga.js"></script>
+        <!-- bt fin -->
+        <!-- menu editor js -->
+        
+        <script type="text/javascript" src="{{ site_base }}/static/js/plugins/jquery.lazyload.js"></script>
+        <script src="{{ site_base }}/static/menu/js/modernizr.js"></script>
+        <script src="{{ site_base }}/static/menu/js/main.js"></script>
+        <script src="{{ site_base }}/static/menu/js/WallopSlider.js"></script>
+        <script src="{{ site_base }}/static/menu/js/script.js"></script>
+        <script src="{{ site_base }}/static/menu/js/colpick.js"></script>
+        <!-- menu editor js -->
+        <script src="{{ site_base }}/static/js/menu-material-2.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/ligthbox-d.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="https://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/plugins/selectize/selectize.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/plugins/loadingplay/fileuploader/dist/fileuploader.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/plugins/loadingplay/imageupload.preview.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/plugins/jquery.maskedinput.min.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/me.js" ></script>
+        <!-- wysihtml5 parser rules -->
+        <script src="{{ site_base }}/static/bower_components/wysihtml/dist/wysihtml5x-toolbar.min.js"></script>
+        <script src="{{ site_base }}/static/bower_components/wysihtml/parser_rules/advanced_and_extended.js"></script>
+        <!-- wysihtml5 Library -->
+        <script type="text/javascript" src="{{ site_base }}/static/js/gallery/add.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/article/add.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/product/add.js"></script>
+        <!---<script type="text/javascript" src="{{ site_base }}/static/js/article/add_image_article.js"></script>-->
+        <script type="text/javascript" src="{{ site_base }}/static/js/validation/form_validation.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/page/add.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/content/add.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/content/set_fixed.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/tags.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/menu-editor.js" ></script>
+        <script type="text/javascript">
+                $('#picker').colpick({
+                    flat: true,
+                    layout: 'hex',
+                    submit: 0
+                });
+        </script>
+        <script>
+                window.fbAsyncInit = function() {
+                    FB.init({
+                        appId: '348231912006000',
+                        xfbml: true,
+                        version: 'v2.1'
+                    });
+                };
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {
+                        return;
+                    }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/header.js" ></script>
+        <script src="{{ site_base }}/static/js/scrollReveal.min.js?ver=2.1.0"></script>
+        <script type="text/javascript">
+                window.sr= new scrollReveal({
+                    reset: true,
+                    move:"20px",
+                    vFactor: 0.20
+                });
+        </script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/members/add.js"></script>
+
+        <script type="text/javascript" src="{{ site_base }}/static/bower_components/moment/min/moment.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/bower_components/moment/moment.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/imageloader.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/nprogress-master/nprogress.js"></script>
+        <!-- <script type="text/javascript" src="{{ site_base }}/static/js/textboxio.js"></script> -->
+        <script type="text/javascript" src="https://clouddelivery.textbox.io/1/getEditor?apiKey=oegj4ea4fdwlwy6q8uhiwrz9xl3xxht8mem4zqs8cqckryvo" ></script>
+
+        {% if is_admin %}
+        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/editabletext.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/editableimage.js"></script>
+        {% end %}
+        <script type="text/javascript" src="{{ site_base }}/common/js/page_editable.js"></script>
+
+        {% block scripts %}{% end %}
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".fancybox").fancybox({
+                    'width':350,
+                    'height':500,
+                    'autoSize' : false,
+                    'autoScale': false,
+                    // 'type': 'iframe',
+                    // 'scrolling': 'no',
+                    // 'padding': 0,
+                    'helpers': {
+                            overlay: {
+                                locked: false
+                            }
+                        },
+                    beforeShow: function(){
+                        $("body").css({'overflow-y':'hidden'});
+                    },
+                    afterClose: function(){
+                        $("body").css({'overflow-y':'visible'});
+                    }
+                });
+            });
+        </script>
+
+        {% if is_admin %}
+        <!--Drag to fix content-->
+        <script type="text/javascript">
+                $(document).ready(function()
+                {
+                    var box_actual; //actual ===> "donde esta flotando el mouse"
+                    var content_id_actual = "none";
+                    var box_id_actual = "none";
+                    var content_id_origen = "none";
+                    var box_id_origen = "none";
+
+                    //(content_id origen, box_id destino)
+                    var set_box = function(content_id, box_id)
+                    {
+                        console.log("content_id : " + content_id + " box_id : " + box_id);
+                        $.get(
+                            site_base + "/content/set",
+                            { 
+                                "content_id" : content_id, 
+                                "box_id" : box_id 
+                            },
+                            function(html)
+                            {
+                                // reload content
+                                document.location.reload();
+                                // $.get(site_base + "/ajax_content", function(html)
+                                // {
+                                //     $(".content-main-container").html(html);
+                                //     $(document).ready();
+                                // });
+                            });
+                    };
+
+                    $(document).on("dragstart", function(event)
+                    {
+                        event.preventDefault();   
+                    });
+                    
+                    $("div.box-display").mouseenter(function()
+                    {
+                        try
+                        {
+                            // DATOS CAJA ACTUAL                             
+                            box_actual = $(this);
+                            var info_container = $(this).children("span#box-id-container");                            
+                            content_id_actual = info_container.attr("content-id");
+                            box_id_actual = info_container.attr("box-id");
+                            //Si el contenido esta fijo, no pescar
+                            if (info_container.attr("class") == "btn-modificar-cont btn-contet-fixed")
+                            { 
+                                content_id_actual = "none";
+                                box_id_actual = "none";
+                            }
+                        }
+                        catch(exception)
+                        {
+                            // nothing here                        
+                        }
+                    });                    
+                    
+                    $("div.box-display").mouseleave(function()
+                    {                           
+                        content_id_actual = "none";
+                        box_id_actual = "none";                  
+                    });
+                    
+                    $("div.box-display").mousedown(function()
+                    { 
+                        try
+                        {
+                            // DATOS CAJA ACTUAL                             
+                            var info_container = $(this).children("span#box-id-container");                            
+                            content_id_origen = info_container.attr("content-id");
+                            box_id_origen = info_container.attr("box-id");
+                            //Si el contenido esta fijo, no pescar
+                            if (info_container.attr("class") == "btn-modificar-cont btn-contet-fixed")
+                            { 
+                                content_id_origen = "none";
+                                box_id_origen = "none";
+                            }
+                        }
+                        catch(exception)
+                        {
+                            // nothing here                        
+                        }
+                    });
+
+                    $(document).on("dragstart", "div.box-display", function(event)
+                    {
+                        try
+                        {
+                            // DATOS CAJA ACTUAL                             
+                            var info_container = $(this).children("span#box-id-container");                            
+                            content_id_origen = info_container.attr("content-id");
+                            box_id_origen = info_container.attr("box-id");
+                            //Si el contenido esta fijo, no pescar
+                            if (info_container.attr("class") == "btn-modificar-cont btn-contet-fixed")
+                            { 
+                                content_id_origen = "none";
+                                box_id_origen = "none";
+                            }
+                        }
+                        catch(exception)
+                        {
+                            // nothing here                        
+                        }
+                    });
+
+                    $(document).mouseup(function()
+                    {
+                        try
+                        {
+                            if(box_id_actual != "none" && box_id_origen != "none" && box_id_actual != box_id_origen){
+                                set_box(content_id_origen, box_id_actual);
+                            }else{
+                                //console.log("hay una caja fija o es la misma");
+                            }
+                        }
+                        catch(exception)
+                        {
+                            // nothing here
+                        }
+                    });
+                    
+                    $(document).on("dragend", "div.box-display", function()
+                    {             
+                        try
+                        {
+                            if(box_id_actual != "none" && box_id_origen != "none" && box_id_actual != box_id_origen){
+                                set_box(content_id_origen, box_id_actual);
+                            }else{
+                                //console.log("hay una caja fija o es la misma");
+                            }                   
+                        }
+                        catch(exception)
+                        {
+                            // nothing here
+                        }
+                    });
+                });
+        </script>
+
+        <!--Dragging mini image-->
+        <script type="text/javascript">
+                $(document).ready(function()
+                {
+                    var img_box_actual; //...
+                    var box_id_actual;
+                    var box_id_dragging;
+                    var mouse_position_y = 0;
+                    var DRAGGING = false;
+                    //$("body").animate({scrollTop: 1500});
+                    //$(window).on("mousemove")
+
+                    setInterval(function()
+                    {
+                        if (DRAGGING)
+                        {
+                            var scroll_amount = 275;
+                            var scroll_area = $(window).height()*0.15;
+                            var aux = $(window).scrollTop();
+                            win_scroll_bot = $(window).scrollTop() + $(window).height();
+
+                            if (mouse_position_y - $(window).scrollTop() >= 0 && mouse_position_y - $(window).scrollTop() <= scroll_area)
+                            {                                
+                                aux = $(window).scrollTop() - scroll_amount;
+                                if (aux < 0) aux = 0;
+                                $("body").stop();
+                                $("body").animate({scrollTop: aux});
+                                mouse_position_y -= scroll_amount;
+                            }
+                            if (win_scroll_bot - mouse_position_y >= 0 && win_scroll_bot - mouse_position_y <= scroll_area)
+                            {
+                                aux = $(window).scrollTop() + scroll_amount;
+                                if (aux > $(document).height() - $(window).height()) aux = $(document).height() - $(window).height();
+                                $("body").stop();
+                                $("body").animate({scrollTop: aux});
+                                mouse_position_y += scroll_amount;
+                            }
+                        }
+                    }, 425);
+
+                    $("div.box-display").on("mousedown", function(event)
+                    {
+                        if (event.which == 1) //left click only
+                        {
+                            mouse_position_y = event.pageY;                         
+                            try
+                            {
+                                DRAGGING = true;
+                                box_id_dragging = $(this).find("div.img-drag-to").attr("box-id");
+                                var target_image = $(this).find("img.lazy ").attr("src");
+                                $("#drag-mini-image").attr("src", target_image);
+                            }
+                            catch(exception)
+                            {
+                                // nothing here
+                            }
+
+                            $(document).on("mousemove", function(event)
+                            {
+                                mouse_position_y = event.pageY;
+                                if (DRAGGING){
+                                    $("#drag-mini-image-container").css({"visibility" : "visible"});
+                                    $("#drag-mini-image-container").css({"left" : (event.pageX + 1) + "px", "top" : (event.pageY + 1) + "px"});
+                                }else{
+                                    $("#drag-mini-image-container").css({"visibility" : "hidden"});
+                                }
+                                
+                            });  
+                        }                        
+                    });
+
+                    $(document).on("mouseup", function()
+                    {
+                        DRAGGING = false;
+                        $("#drag-mini-image-container").css({"visibility" : "hidden"});
+                        $(document).off("mousemove");
+                        $("#drag-mini-image").attr("src", "");
+                        if (img_box_actual != null){
+                            img_box_actual.stop();
+                            img_box_actual.fadeOut("fast");
+                            img_box_actual = null;
+                        }
+                    });
+
+                    $(document).on("dragend", function()
+                    {
+                        DRAGGING = false;
+                        $("#drag-mini-image-container").css({"visibility" : "hidden"});
+                        $(document).off("mousemove");
+                        $("#drag-mini-image").attr("src", "");
+                        if (img_box_actual != null){
+                          img_box_actual.stop();
+                            img_box_actual.fadeOut("fast");
+                            img_box_actual = null; 
+                        }
+                    });
+
+                    $("div.box-display").mouseenter(function()
+                    {
+                        try
+                        {
+                            box_id_actual = $(this).find("div.img-drag-to").attr("box-id");
+                            if (DRAGGING && box_id_actual != box_id_dragging)
+                            {
+                                img_box_actual = $(this).find("div.img-drag-to");
+                                img_box_actual.stop();
+                                img_box_actual.fadeIn("fast");
+                            }
+                        }
+                        catch(exception)
+                        {
+                            // nothing here
+                        }
+                    });
+
+                    $("div.box-display").mouseleave(function()
+                    {
+                        try
+                        {
+                            if (DRAGGING && box_id_actual != box_id_dragging)
+                            {
+                                img_box_actual.stop();
+                                img_box_actual.fadeOut("fast");
+                                img_box_actual = null; //not sure....
+                            }
+                        }
+                        catch(exception)
+                        {
+                            // nothing here
+                        }
+                    });
+                });
+        </script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/edit_order.js" ></script>
+        {% end %}
+
+        {% if is_admin %}
+        <script type="text/javascript">
+        var site_name = "{{ site.name }}";
+        </script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js" ></script>
+        {% end %}
+        <script type="text/javascript">
+
+        var formatMoney = function()
+        {
+            var money = function(n, c, d, t)
+                {
+                    c = isNaN(c = Math.abs(c)) ? 0 : c;
+                    d = d === undefined ? ',' : d;
+                    t = t === undefined ? '.' : t;
+                    var s = n < 0 ? '-' : '';
+                    var i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + '';
+                    var j = (j = i.length) > 3 ? j % 3 : 0;
+
+                    return s + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '');
+                };
+
+            $('.price').each(function()
+                {
+                    var price = $(this).html().split('.').join('');
+                    $(this).html(money(price));
+                });
+
+        };
+
+        $(document).ready(function()
+        {
+            formatMoney();
+        });
+
+        $(document).ajaxComplete(function()
+        {
+            formatMoney();
+        });
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-67638616-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    
+        
+       <!-- **boton buscar icono rojo -->
+        <script type="text/javascript" >
+            $(document).on('click', '.busqueda-movil-material', function()
+            {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 300);
+
+            });
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,89 @@
+{% extends "../base.html" %}
+{% block title %}
+    {{ site.name }}
+{% end %}
+{% block scripts %}
+<link href="https://fonts.googleapis.com/css?family=Lato" type="text/css"/>
+{% if is_admin %}
+<link rel="stylesheet" href="{{ site_base }}/static/css/textbox_io.css" type="text/css">
+<script type="text/javascript" src="{{ site_base }}/static/js/article/detail.js"></script>
+{% end %}
+{% end %}
+{% block header %}
+{% include '../home/inside_header.html' %}
+{% end %}
+{% block body %}
+    <div id="wrap">
+        <!-- registration -->
+        <div class="container-fluid container-fluid-art cart-list productlist">
+            <div class="row">
+                <div class="col-sm-12 blog-content">
+                    <input type="hidden" id="article-description-ajax-url" value="{{ site.url }}article/update-description">
+                    <input type="hidden" id="article-content-id" value="{{article['id']}}">
+                    <div class="row">
+                        <div class="col-sm-12 blog-content" style="margin-bottom: 30px;">
+                            <h1 class="h1-art">
+                                {{ article["title"] }}
+                            </h1>
+                            <div class="post-date" style="text-align:left;">
+                                <br>
+                            <!-- {{ article["creation_date"].strftime("%d %b %Y") }} -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content articulo-text" style="text-align:left; float:left;">
+                        <div class="row">
+                            <div class="col-sm-12 especial">
+                                <h2 class="h2-art" style="color: #f03737 !important;">"{{ article["caption"] }}"
+                                <!-- <p>___________</p> -->
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 content-picture">
+                                <div>
+                                    <img src="{{ site_base }}/static/img/0013.png" class="lazy" data-original="{{ article["thumb_500"] }}" offsetx="{{ article["offset_x"] }}" offsety="{{ article["offset_y"] }}" alt="item">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 especial">
+                                <div id="description" class="p-art">
+                                    {{ article["description"] }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 especial p-art" style="text-align: right;">
+                        </div>
+                        <div class="col-sm-12 p-art ">
+                            tags | <a>{{ "</a> , <a>".join(article["tags"]) }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 blog-sidebar">
+                    <div class="widget" style="text-align:left;">
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- row 4 -->
+        </div>
+        
+        <div class="container-fluid productlist">
+            <article>
+                <header>
+                    <h1 class="h1-art especial" >Contenido Relacionado</h1>
+                </header>
+            </article>
+            <div class="row cont-rel">
+                {{ content }}
+            </div>
+        </div>
+
+        <div class="carritoproductos clearfix">
+            <div class="flecha clearfix">
+            </div>
+        </div>
+    </div>
+{% end %}

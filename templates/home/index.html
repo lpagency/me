@@ -1,0 +1,45 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+{% include '../home/header.html' %}
+{% end %}
+
+{% block scripts %}
+{% end %}
+
+{% block body %}
+{% if is_admin %}
+{% set editabletext = 'editabletext' %}
+{% else %}
+{% set editabletext = '' %}
+{% end %}
+    
+    <div id="wrap" class="top-home">
+
+        <!-- registration -->
+        <div class="container-fluid productlist" >
+            <div class="frase-insp col-sm-12">
+                    <h1 {% if is_admin %}class="editabletext" text-id="page-main-phrase"{% end %} >
+                        {{ read_text('page-main-phrase') }}
+                    </h1>
+            </div>
+            <!-- raw 1 -->
+            <div class="row content-main-container">
+
+                {{ content }}
+
+            </div>
+            <div class="carritoproductos clearfix">
+                <div class="flecha clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% include '../home/footer.html' %}
+{% end %}
