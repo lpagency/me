@@ -782,6 +782,7 @@ ul.nav-list li a:hover {
 	background-color: transparent;
 }
 a.nav-brand {
+margin-left: 20px;
 border: 2px solid #FFF;
 /* padding: 4px; */
 width: auto;
