@@ -29,6 +29,9 @@
         a.nav-brand {
             margin-left: 20px;
         }
+        .pip-1{
+            right: -13px !important;
+        }
 </style>
 {% end %}
 {% block body %}
@@ -143,4 +146,5 @@
         $("#form_payment_me").attr("action", checkout_url + "one_item");
     });
 </script>
+{% include ../home/inside_footer.html %}
 {% end %}
