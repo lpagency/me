@@ -164,7 +164,7 @@
             <div class="busqueda-movil-material hide-show">
                <a href="{{ site_base }}/buscar" class="fancybox fancybox.iframe">
                 <i class="icon-search" <i class="icon-search" style="color: white;position: relative;right: 14px;bottom: 1px;"></i>
-                </a> 
+                </a>
             </div>
             <form action="{{ site_base }}/search" method="get">
                 <input type="hidden" name="t" value="tags">
@@ -178,7 +178,7 @@
         <img id="drag-mini-image" src="" style="height: 60px; opacity: 0.7;"></i>
         </span>
         <!-- botón agregar -->
-        <span class="btn-menu-bottom btn-categories">        
+        <span class="btn-menu-bottom btn-categories">
         <i class="icon-list"></i>
         </span>
         <span class="btn-menu-bottom btn-edit-menu" style="background-color: rgb(111, 46, 128); right: 10px; bottom: 20px; z-index: 3000; display: none;">
@@ -235,6 +235,7 @@
                                 <li class=""><a href="{{ site_base }}/weconnect">WEConnect</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
                                 <li class=""><a href="{{ site_base }}/reddeconsultores">Red de Consultores</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
                                 <li class=""><a href="{{ site_base }}/alianzasestrategicas">Alianzas Estratégicas</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
+                                <li class=""><a href="{{ site_base }}/directorioaceleradora">Directorio Aceleradora</a><span class="button-edit-item" style="display: none;"><i id="dot-aim" class="fa fa-pencil-square-o" style="color: gray; "></i></span></li>
                             </ul>
                         </li>
                         <li id="first" class="menu-li-first" style="background-color:rgb(64, 153, 172);">
@@ -298,7 +299,7 @@
         <script type="text/javascript" src="{{ site_base }}/static/jsbt/ga.js"></script>
         <!-- bt fin -->
         <!-- menu editor js -->
-        
+
         <script type="text/javascript" src="{{ site_base }}/static/js/plugins/jquery.lazyload.js"></script>
         <script src="{{ site_base }}/static/menu/js/modernizr.js"></script>
         <script src="{{ site_base }}/static/menu/js/main.js"></script>
@@ -425,9 +426,9 @@
                         console.log("content_id : " + content_id + " box_id : " + box_id);
                         $.get(
                             site_base + "/content/set",
-                            { 
-                                "content_id" : content_id, 
-                                "box_id" : box_id 
+                            {
+                                "content_id" : content_id,
+                                "box_id" : box_id
                             },
                             function(html)
                             {
@@ -443,55 +444,55 @@
 
                     $(document).on("dragstart", function(event)
                     {
-                        event.preventDefault();   
+                        event.preventDefault();
                     });
-                    
+
                     $("div.box-display").mouseenter(function()
                     {
                         try
                         {
-                            // DATOS CAJA ACTUAL                             
+                            // DATOS CAJA ACTUAL
                             box_actual = $(this);
-                            var info_container = $(this).children("span#box-id-container");                            
+                            var info_container = $(this).children("span#box-id-container");
                             content_id_actual = info_container.attr("content-id");
                             box_id_actual = info_container.attr("box-id");
                             //Si el contenido esta fijo, no pescar
                             if (info_container.attr("class") == "btn-modificar-cont btn-contet-fixed")
-                            { 
+                            {
                                 content_id_actual = "none";
                                 box_id_actual = "none";
                             }
                         }
                         catch(exception)
                         {
-                            // nothing here                        
+                            // nothing here
                         }
-                    });                    
-                    
-                    $("div.box-display").mouseleave(function()
-                    {                           
-                        content_id_actual = "none";
-                        box_id_actual = "none";                  
                     });
-                    
+
+                    $("div.box-display").mouseleave(function()
+                    {
+                        content_id_actual = "none";
+                        box_id_actual = "none";
+                    });
+
                     $("div.box-display").mousedown(function()
-                    { 
+                    {
                         try
                         {
-                            // DATOS CAJA ACTUAL                             
-                            var info_container = $(this).children("span#box-id-container");                            
+                            // DATOS CAJA ACTUAL
+                            var info_container = $(this).children("span#box-id-container");
                             content_id_origen = info_container.attr("content-id");
                             box_id_origen = info_container.attr("box-id");
                             //Si el contenido esta fijo, no pescar
                             if (info_container.attr("class") == "btn-modificar-cont btn-contet-fixed")
-                            { 
+                            {
                                 content_id_origen = "none";
                                 box_id_origen = "none";
                             }
                         }
                         catch(exception)
                         {
-                            // nothing here                        
+                            // nothing here
                         }
                     });
 
@@ -499,20 +500,20 @@
                     {
                         try
                         {
-                            // DATOS CAJA ACTUAL                             
-                            var info_container = $(this).children("span#box-id-container");                            
+                            // DATOS CAJA ACTUAL
+                            var info_container = $(this).children("span#box-id-container");
                             content_id_origen = info_container.attr("content-id");
                             box_id_origen = info_container.attr("box-id");
                             //Si el contenido esta fijo, no pescar
                             if (info_container.attr("class") == "btn-modificar-cont btn-contet-fixed")
-                            { 
+                            {
                                 content_id_origen = "none";
                                 box_id_origen = "none";
                             }
                         }
                         catch(exception)
                         {
-                            // nothing here                        
+                            // nothing here
                         }
                     });
 
@@ -531,16 +532,16 @@
                             // nothing here
                         }
                     });
-                    
+
                     $(document).on("dragend", "div.box-display", function()
-                    {             
+                    {
                         try
                         {
                             if(box_id_actual != "none" && box_id_origen != "none" && box_id_actual != box_id_origen){
                                 set_box(content_id_origen, box_id_actual);
                             }else{
                                 //console.log("hay una caja fija o es la misma");
-                            }                   
+                            }
                         }
                         catch(exception)
                         {
@@ -572,7 +573,7 @@
                             win_scroll_bot = $(window).scrollTop() + $(window).height();
 
                             if (mouse_position_y - $(window).scrollTop() >= 0 && mouse_position_y - $(window).scrollTop() <= scroll_area)
-                            {                                
+                            {
                                 aux = $(window).scrollTop() - scroll_amount;
                                 if (aux < 0) aux = 0;
                                 $("body").stop();
@@ -594,7 +595,7 @@
                     {
                         if (event.which == 1) //left click only
                         {
-                            mouse_position_y = event.pageY;                         
+                            mouse_position_y = event.pageY;
                             try
                             {
                                 DRAGGING = true;
@@ -613,12 +614,11 @@
                                 if (DRAGGING){
                                     $("#drag-mini-image-container").css({"visibility" : "visible"});
                                     $("#drag-mini-image-container").css({"left" : (event.pageX + 1) + "px", "top" : (event.pageY + 1) + "px"});
-                                }else{
+                                } else {
                                     $("#drag-mini-image-container").css({"visibility" : "hidden"});
                                 }
-                                
-                            });  
-                        }                        
+                            });
+                        }
                     });
 
                     $(document).on("mouseup", function()
@@ -643,7 +643,7 @@
                         if (img_box_actual != null){
                           img_box_actual.stop();
                             img_box_actual.fadeOut("fast");
-                            img_box_actual = null; 
+                            img_box_actual = null;
                         }
                     });
 
@@ -735,8 +735,8 @@
             ga('create', 'UA-67638616-1', 'auto');
             ga('send', 'pageview');
         </script>
-    
-        
+
+
        <!-- **boton buscar icono rojo -->
         <script type="text/javascript" >
             $(document).on('click', '.busqueda-movil-material', function()
