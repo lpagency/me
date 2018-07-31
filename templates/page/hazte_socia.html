@@ -44,11 +44,11 @@
                     <table class="table-title" cellspacing="0" border="0" align="center" cellpadding="0" width="1000">
                         <tr>
                             <td width="1000">
-                                
+
                                 <table cellspacing="0" border="0"  cellpadding="0" width="1000">
                                     <tr>
                                         <td width="1000">
-                                            
+
                                             <table cellspacing="30" border="0" cellpadding="0" width="000" bgcolor="#FFFFFF" >
                                                 <tr>
                                                     <td width="1000"><p class="esp" style="text-align: center;"><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 45px; color:#C62C37;">Hazte Socia!</span></strong></p>
@@ -57,19 +57,19 @@
                                                         empresarias y emprendedoras. <br>
                                                         Para convertirte en socia solo debes completar el siguiente formulario y realizar tu pago
                                                     </span>.</p> </td></tr>
-                                                    
+
                                                 </table>
                                                 <table cellspacing="0" border="0" cellpadding="0" width="1000">
                                                     <tr><td width="1000" height="30" style="background-color: #f5f5f5;"></td></tr>
                                                 </table>
-                                                
-                                                
-                                                
+
+
+
                                                 <table cellspacing="0" border="0" cellpadding="0" width="1000">
                                                     <tr>
                                                         <td width="1000" style="background-color: #f5f5f5;">
-                                                            
-                                                            
+
+
                                                             <table cellspacing="8" border="0" cellpadding="0" width="100%" style="margin-top: 0px;">
                                                                 <tr>
                                                                     <td width="41%" height="400" style="padding:20px;" ><p style="text-align: left; font-size: 15px; font-family: arial,helvetica,sans-serif; font-weight:400;color: #707070;">MEDIOS DE PAGO
@@ -80,7 +80,7 @@
                                                                         Cuenta Corriente: 45932450, Banco BCI.<br>
                                                                         Rut: 96.991.860-9<br>
                                                                     $80.000 Plan Conecta</p>
-                                                                    
+
                                                                     <p style="text-align:left; font-size: 15px; font-family: arial,helvetica,sans-serif; font-weight:lighter;color: #707070;">
                                                                     *Debes enviar la copia del depósito o transferencia al mail directora@me.cl,  indicando a quien corresponde el pago, para confirmar tu inscripción y datos de facturación, lo que acreditará tu incorporación a Mujeres Empresarias.</p>
                                                                     <p style="text-align: left;font-size: 15px; font-family: arial,helvetica,sans-serif; font-weight:lighter;color: #707070;">
@@ -104,7 +104,7 @@
                                                                     <p class="text-center">
                                                                         <form id="form_payment_me" method="post" enctype="application/x-www-form-urlencoded">
                                                                             <input type="hidden" name="product_sku" value="MEMBME">
-                                                                            <input type="hidden" name="site_id" value="{{site.id}}">
+                                                                            <input type="hidden" name="site_name" value="{{site.name}}">
                                                                             <button class="btn btn-danger btn-mov" type="submit">Pagar </button>
                                                                         </form>
                                                                     </p>
@@ -114,7 +114,7 @@
                                                             </table><table cellspacing="0" border="0" cellpadding="0" width="1000">
                                                             <tr><td width="1000" height="30" style="background-color: #f5f5f5;"></td></tr>
                                                         </table>
-                                                        
+
                                                         <!--/100% body table-->
                                                     </div>
                                                 {% end %}
@@ -133,12 +133,12 @@
         }
 
         // configure for each enviroment
-        if ( isLocalHost() ) 
+        if ( isLocalHost() )
         {
             base_url = 'https://localhost:8520/';
             checkout_url = 'https://localhost:8522/';
-        } 
-        else if ( isDevelopment() ) 
+        }
+        else if ( isDevelopment() )
         {
             base_url = 'https://apibodegas.ondev.today/';
             checkout_url = 'https://lpcheckout.ondev.today/';
