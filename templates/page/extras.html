@@ -7,7 +7,11 @@
 {% block header %}
 {% include '../home/inside_header.html' %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
-    <h1><span class="title-view" >{{ page.name }}</span></h1>
+    {% if is_admin %}
+        <span class="editabletext" text-id="me-extras" >{{ read_text('me-extras') }}</span>
+    {% else %}
+        <span>{{ read_text('me-extras') }}</span>
+    {% end %}
     {% if is_admin %}
     <h4><span class="keywords-view">{{ page.keywords }}</span></h4>
     {% end %}
