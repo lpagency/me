@@ -8,35 +8,33 @@
 {% include '../home/inside_header.html' %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
     {% if is_admin %}
-        <span class="editabletext" text-id="me-aceleradoras" >{{ read_text('me-aceleradoras') }}</span>
+        <span class="editabletext" text-id="me-alianzasestrategicas" >{{ read_text('me-alianzasestrategicas') }}</span>
     {% else %}
-        <span>{{ read_text('me-aceleradoras') }}</span>
+        <span>{{ read_text('me-alianzasestrategicas') }}</span>
     {% end %}
-    <h4>
     {% if is_admin %}
-                <span class="editabletext" text-id="frase_inspiradora_link" >{{ read_text('frase_inspiradora_link') }}</span>
-                {% else %}
-                {{ read_text('frase_inspiradora_link') }}
-                {% end %}
-        </h4>
+    <h4><span class="keywords-view">{{ page.keywords }}</span></h4>
+    {% end %}
 </div>
 {% end %}
 
 {% block scripts %}
+
 {% if is_admin %}
+
 <script type="text/javascript">
     $(document).editablepage({
         page_name : "{{page.name}}",
         page_keywords : "{{page.keywords}}",
-        page_uri : "aceleradoralink",
-        body_url : site_base + "/page/aceleradoralink/body"
+        page_uri : "{{page.uri}}",
+        body_url : site_base + "/page/{{ page.uri }}/body"
     });
 </script>
 {% else %}
 <script type="text/javascript">
     $(document).loadpagecontent({
-        body_url : site_base + "/page/aceleradoralink/body",
-        page_uri : "aceleradoralink"
+        body_url : site_base + "/page/{{ page.uri }}/body",
+        page_uri : "{{ page.uri }}"
     });
 </script>
 {% end %}
@@ -46,17 +44,15 @@
 {% block css %}
 <link type="text/css" rel='stylesheet' href="{{ site_base }}/static/css/page.edit.css" />
 <style type="text/css">
-
     a.nav-brand {
         margin-left: 20px;
     }
     .pip-1{
         right: -13px !important;
     }
-
 </style>
 {% end %}
-Aceleradora de Negocios de Mujeres Empresarias es la primera aceleradora de Negocios creada para la mujer, integrando asesorías y financiamiento para potenciar los negocios liderados por mujeres.
+
 {% block body %}
     <div id="wrap">
         <!-- registration -->
@@ -65,20 +61,12 @@ Aceleradora de Negocios de Mujeres Empresarias es la primera aceleradora de Nego
                 <div class="container-fluid-art">
                 <p>
                 {% if is_admin %}
-                <span class="editabletext" text-id="{{ site.name + "aceleradoralink" }}" >{{ read_text(site.name + "aceleradoralink") }}</span>
+                <span class="editabletext" text-id="{{ site.name + page.uri }}" >{{ read_text(site.name + page.uri) }}</span>
                 {% else %}
-                {{ read_text(site.name + "aceleradoralink") }}
+                {{ read_text(site.name + page.uri) }}
                 {% end %}
                 </p>
                 </div>
-            </div>
-            <div style="margin-bottom: 3%;">
-                <h3>Conoce a nuestros directores y mentores aquí :</h3>
-                <a href="https://www.me.cl/directorioaceleradora">
-                    <img src="https://84static.loadingplay.com/static/images/500_cfa328ba1af9d58079463b46e47a764f_IMGWAjpg.png" style="
-    width: 300px;
-            ">
-                </a>
             </div>
             <!-- raw 1 -->
             <div class="row content-body">
@@ -89,6 +77,5 @@ Aceleradora de Negocios de Mujeres Empresarias es la primera aceleradora de Nego
             </div>
         </div>
     </div>
-
-{% include '../home/inside_footer.html' %}
+    {% include ../home/inside_footer.html %}
 {% end %}
