@@ -14,7 +14,11 @@
 {% end %}
 {% block body %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
-<h1><span class="title-view">Revista ME </span></h1>
+{% if is_admin %}
+    <span class="editabletext" text-id="me-revistame" >{{ read_text('me-revistame') }}</span>
+{% else %}
+    <span>{{ read_text('me-revistame') }}</span>
+{% end %}
 <!-- <h4><span class="keywords-view">Accede a todos nuestros números pasdos</span></h4> -->
 </div>
     <div class="container-fluid container-fluid-art cart-list productlist revistame">

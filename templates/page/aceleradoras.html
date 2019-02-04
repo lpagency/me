@@ -7,7 +7,11 @@
 {% block header %}
 {% include '../home/inside_header.html' %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
-    <h1><span class="title-view" >Aceleradora</span></h1>
+    {% if is_admin %}
+        <span class="editabletext" text-id="me-aceleradoras" >{{ read_text('me-aceleradoras') }}</span>
+    {% else %}
+        <span>{{ read_text('me-aceleradoras') }}</span>
+    {% end %}
     <h4>
     {% if is_admin %}
                 <span class="editabletext" text-id="frase_inspiradora_link" >{{ read_text('frase_inspiradora_link') }}</span>
