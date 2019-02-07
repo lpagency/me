@@ -8,7 +8,7 @@
 {% include '../home/inside_header.html' %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
     {% if is_admin %}
-        <span class="editabletext" text-id="me-formacionme" >{{ read_text('me-formacionme') }}</span>
+        <div class="editabletext" text-id="me-formacionme" >{{ read_text('me-formacionme') }}</div>
     {% else %}
         <span>{{ read_text('me-formacionme') }}</span>
     {% end %}

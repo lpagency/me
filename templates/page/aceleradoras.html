@@ -8,13 +8,13 @@
 {% include '../home/inside_header.html' %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
     {% if is_admin %}
-        <span class="editabletext" text-id="me-aceleradoras-hard" >{{ read_text('me-aceleradoras-hard') }}</span>
+        <div class="editabletext" text-id="me-aceleradoras-hard" >{{ read_text('me-aceleradoras-hard') }}</div>
     {% else %}
         <span>{{ read_text('me-aceleradoras-hard') }}</span>
     {% end %}
     <h4>
         {% if is_admin %}
-        <span class="editabletext" text-id="frase_inspiradora_link" >{{ read_text('frase_inspiradora_link') }}</span>
+        <div class="editabletext" text-id="frase_inspiradora_link" >{{ read_text('frase_inspiradora_link') }}</div>
         {% else %}
         {{ read_text('frase_inspiradora_link') }}
         {% end %}
