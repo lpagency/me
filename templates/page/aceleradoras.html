@@ -8,9 +8,9 @@
 {% include '../home/inside_header.html' %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
     {% if is_admin %}
-    <span class="editabletext" text-id="me-aceleradoras" >{{ read_text('me-aceleradoras') }}</span>
+        <span class="editabletext" text-id="me-aceleradoras-hard" >{{ read_text('me-aceleradoras-hard') }}</span>
     {% else %}
-    <span>{{ read_text('me-aceleradoras') }}</span>
+        <span>{{ read_text('me-aceleradoras-hard') }}</span>
     {% end %}
     <h4>
         {% if is_admin %}
@@ -23,22 +23,22 @@
 {% end %}
 
 {% block scripts %}
-{% if is_admin %}
-<script type="text/javascript">
-    $(document).editablepage({
-        page_name : "{{page.name}}",
-        page_keywords : "{{page.keywords}}",
-        page_uri : "aceleradoralink",
-        body_url : site_base + "/page/aceleradoralink/body"
-    });
-</script>
-{% else %}
-<script type="text/javascript">
-    $(document).loadpagecontent({
-        body_url : site_base + "/page/aceleradoralink/body",
-        page_uri : "aceleradoralink"
-    });
-</script>
+    {% if is_admin %}
+    <script type="text/javascript">
+        $(document).editablepage({
+            page_name : "{{page.name}}",
+            page_keywords : "{{page.keywords}}",
+            page_uri : "aceleradoralink",
+            body_url : site_base + "/page/aceleradoralink/body"
+        });
+    </script>
+    {% else %}
+    <script type="text/javascript">
+        $(document).loadpagecontent({
+            body_url : site_base + "/page/aceleradoralink/body",
+            page_uri : "aceleradoralink"
+        });
+    </script>
 {% end %}
 
 {% end %}
@@ -65,12 +65,12 @@ Aceleradora de Negocios de Mujeres Empresarias es la primera aceleradora de Nego
                 <div class="container-fluid-art">
                 <p>
                 {% if is_admin %}
-                <span class="editabletext" text-id="{{ site.name + 'aceleradoralink' }}" >{{ read_text(site.name + "aceleradoralink") }}</span>
+                    <span class="editabletext" text-id="{{ site.name + 'aceleradoralink' }}" >{{ read_text(site.name + "aceleradoralink") }}</span>
                 {% else %}
-                {{ read_text(site.name + "aceleradoralink") }}
+                    {{ read_text(site.name + "aceleradoralink") }}
                 {% end %}
-                </p>
-                </div>
+                </p>  
+            </div>
             </div>
             <div style="margin-bottom: 3%;">
                 <h3>Conoce a nuestros directores y mentores aquí :</h3>

@@ -60,9 +60,9 @@
                 <div class="container-fluid-art">
                 <p>
                 {% if is_admin %}
-                <span class="editabletext" text-id="{{ site.name + page.uri }}" >{{ read_text(site.name + page.uri) }}</span>
+                    <span class="editabletext" text-id="{{ site.name + page.uri }}" >{{ read_text(site.name + page.uri) }}</span>
                 {% else %}
-                {{ read_text(site.name + page.uri) }}
+                    {{ read_text(site.name + page.uri) }}
                 {% end %}
                 </p>
                 </div>
