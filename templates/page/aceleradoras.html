@@ -8,13 +8,13 @@
 {% include '../home/inside_header.html' %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
     {% if is_admin %}
-        <span class="editabletext" text-id="me-aceleradoras-hard" >{{ read_text('me-aceleradoras-hard') }}</span>
+        <div class="editabletext" text-id="me-aceleradoras-hard" >{{ read_text('me-aceleradoras-hard') }}</div>
     {% else %}
         <span>{{ read_text('me-aceleradoras-hard') }}</span>
     {% end %}
     <h4>
         {% if is_admin %}
-        <span class="editabletext" text-id="frase_inspiradora_link" >{{ read_text('frase_inspiradora_link') }}</span>
+        <div class="editabletext" text-id="frase_inspiradora_link" >{{ read_text('frase_inspiradora_link') }}</div>
         {% else %}
         {{ read_text('frase_inspiradora_link') }}
         {% end %}
@@ -56,7 +56,6 @@
 
 </style>
 {% end %}
-Aceleradora de Negocios de Mujeres Empresarias es la primera aceleradora de Negocios creada para la mujer, integrando asesorías y financiamiento para potenciar los negocios liderados por mujeres.
 {% block body %}
     <div id="wrap">
         <!-- registration -->
@@ -65,11 +64,11 @@ Aceleradora de Negocios de Mujeres Empresarias es la primera aceleradora de Nego
                 <div class="container-fluid-art">
                 <p>
                 {% if is_admin %}
-                    <span class="editabletext" text-id="{{ site.name + 'aceleradoralink' }}" >{{ read_text(site.name + "aceleradoralink") }}</span>
+                    <div class="editabletext" text-id="{{ site.name + 'aceleradoralink' }}" >{{ read_text(site.name + "aceleradoralink") }}</div>
                 {% else %}
                     {{ read_text(site.name + "aceleradoralink") }}
                 {% end %}
-                </p>  
+                </p>
             </div>
             </div>
             <div style="margin-bottom: 3%;">

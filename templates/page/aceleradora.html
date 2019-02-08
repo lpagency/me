@@ -8,13 +8,13 @@
 {% include '../home/inside_header.html' %}
 <div style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
     {% if is_admin %}
-        <span class="editabletext" text-id="me-aceleradora" >{{ read_text('me-aceleradora') }}</span>
+        <div class="editabletext" text-id="me-aceleradora" >{{ read_text('me-aceleradora') }}</div>
     {% else %}
         <span>{{ read_text('me-aceleradora') }}</span>
     {% end %}
     <h4>
     {% if is_admin %}
-                <span class="editabletext" text-id="frase_inspiradora_link" >{{ read_text('frase_inspiradora_link') }}</span>
+                <div class="editabletext" text-id="frase_inspiradora_link" >{{ read_text('frase_inspiradora_link') }}</div>
                 {% else %}
                 {{ read_text('frase_inspiradora_link') }}
                 {% end %}
@@ -65,7 +65,7 @@ Aceleradora de Negocios de Mujeres Empresarias, es la primera aceleradora de Neg
                 <div class="container-fluid-art">
                 <p>
                 {% if is_admin %}
-                <span class="editabletext" text-id="{{ site.name + "aceleradoralink" }}" >{{ read_text(site.name + "aceleradoralink") }}</span>
+                <div class="editabletext" text-id="{{ site.name + "aceleradoralink" }}" >{{ read_text(site.name + "aceleradoralink") }}</div>
                 {% else %}
                 {{ read_text(site.name + "aceleradoralink") }}
                 {% end %}
