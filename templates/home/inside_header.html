@@ -19,7 +19,7 @@
         <!-- título pagina -->
         <!-- imagen fixed -->
         <!--banner grande-->
-        <div class="">
+        <div class="main-banner-header" style="min-height: 200px; background: url('{{ read_image(site.name + '_banner_header',500) }}'); background-size: cover;">
                 {% if is_admin %}
                 <div class="image-upload lapiz visible-movil show-hide">
                    <label for="img_banner_header">
@@ -29,7 +29,7 @@
                 </div>
                 {% end %}
                 {% if read_image(site.name + '_banner_header1', 1) != "" %}
-                <img id="{{ site.name }}_banner_header" src="{{ read_image(site.name + '_banner_header', 1) }} " onload="this.onload='';this.src='{{ read_image(site.name + '_banner_header',500) }}'" class="show-hide" alt="" style="width:100%;">
+                <!-- <img id="{{ site.name }}_banner_header" src="{{ read_image(site.name + '_banner_header', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_header',500) }}'" class="show-hide" alt="" > -->
                 {% end %}
         </div>
 
